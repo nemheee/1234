@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: rgba(230, 255, 255, 0.7);
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+    /* display: flex; */
+}
+ul>li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: green;
+}
+.flex-container{
+    background: rgb(229, 243, 207);
+    display: flex;
+}
+.flex-container>ul{
+    display: flex;
+    flex-direction: row;
+}
+.flex-container>ul>li{
+    padding: 30px;
+    flex:33%;
+}
+@media screen and (min-width:480px) 
+{
+.flex-container{
+    flex-direction: column  ;
+
+}   
+ 
+}
