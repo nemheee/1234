@@ -1,0 +1,22 @@
+{
+  "name": "1234",
+  "version": "1.0.0",
+  "description": "css hugjuulelt ehletsgeey",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nemheee/pheonix-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nemheee/pheonix-web/issues"
+  },
+  "homepage": "https://github.com/nemheee/pheonix-web#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
