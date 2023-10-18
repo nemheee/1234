@@ -1,29 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="John Doe">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Mulish', sans-serif;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px; /* Adjust the max width as needed */
+      position: relative;
+      background: white;
+      text-align: center;
+    }
+
+    .form-group {
+      margin: 20px 0;
+    }
+
+    .input-field {
+      width: 100%;
+      height: 60px;
+      border-radius: 5px;
+      border: 1px solid #000;
+      font-size: 2em;
+      padding: 10px;
+    }
+
+    .checkbox-label {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 200;
+      color: rgba(0, 0, 0, 0.70);
+      margin-left: 20px;
+    }
+
+    .checkbox-input {
+      width: 25px;
+      height: 25px;
+      background: #D9D9D9;
+      margin-left: -400px;
+    }
+
+    .button-container {
+      margin: 20px 0;
+    }
+
+    .login-button, a {
+      display: block;
+      width: 100%;
+      height: 60px;
+      border-radius: 15px;
+      font-size: 25px;
+      font-weight: 700;
+      color: #F5F5F5;
+      text-align: center;
+      line-height: 60px;
+      text-decoration: none;
+      margin: 10px 0;
+      background: #1E4620;
+    }
+
+    a {
+
+      background: none;
+      color: black;
+    }
+  </style>
 </head>
 <body>
-    <header><h1>Log In</h1></header>
-    <div>
-        <label for="inputEmail">Email:</label>
-        <input type="text" class="form-control" id="inputEmail" placeholder="Enter your email" aria-label="Email" aria-required="true"><br>
-
-        <label for="inputPassword">Password:</label>
-        <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" aria-label="Password" aria-required="true"><br>
-
-        <label for="rememberMe">Remember me:</label>
-        <input type="checkbox" id="rememberMe" aria-label="Remember me"><br>
-
-        <button type="submit">Log In</button><br>
-
-        <a href="./signup.html">Create a new account</a><br>
-        <a href="./password.html">Forgot your password?</a>
+  <div class="container">
+    <h1>Нэвтрэх</h1>
+    <div class="form-group">
+      <label for="inputEmail"></label>
+      <input type="text" class="input-field" id="inputEmail" placeholder="Майл хаяг/Утасны дугаар" aria-label="Email" aria-required="true">
     </div>
+    <div class="form-group">
+      <label for="inputPassword"></label>
+      <input type="password" class="input-field" id="inputPassword" placeholder="Нууц үг" aria-label="Password" aria-required="true">
+    </div>
+    <div class="form-group">
+      <input class="checkbox-input" type="checkbox" id="rememberMe" aria-label="Remember me">
+      <label class="checkbox-label" for="rememberMe">Сануулах</label>
+    </div>
+    <div class="button-container">
+      <button  class="login-button">Нэвтрэх</button>
+      <a  href="./signup.html">Шинэ хэрэглэгч</a>
+      <a href="./password.html">Нууц үгээ мартсан</a>
+    </div>
+  </div>
 </body>
 </html>
