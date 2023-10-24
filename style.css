@@ -4,10 +4,10 @@
     margin: 0;
 }
 body{
-    background: rgba(230, 255, 255, 0.7);
+    background: white   ;
     align-items: center;
     justify-content: center;
-    overflow:hidden;
+    /* overflow:hidden; */
     /* display: flex; */
 }
 ul>li{
@@ -16,26 +16,93 @@ ul>li{
 a{
     text-decoration: none;
 }
-a:hover{
-    color: green;
-}
-.flex-container{
-    background: rgb(229, 243, 207);
-    display: flex;
-}
-.flex-container>ul{
-    display: flex;
-    flex-direction: row;
-}
-.flex-container>ul>li{
-    padding: 30px;
-    flex:33%;
-}
-@media screen and (min-width:480px) 
-{
-.flex-container{
-    flex-direction: column  ;
 
-}   
- 
+img{
+    width: 100px;
+}
+#navbar2{
+    background: rgb(50, 143, 50);
+    padding: 1rem;
+}
+#navbar2 ul{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#navbar2 ul li {
+    display: inline;
+    justify-content: space-between;   
+    margin: 1rem;
+    align-items: center;
+    padding: 5px;
+    & a{
+        margin-left: 4%;
+        margin-right: 4%;
+        font-size: 2rem; 
+        text-decoration: none;
+        align-items: center;
+        text-align: center;
+        background: #b5aeae;
+        padding-left: 3%;
+        padding-right: 3%;
+        /* border: 2px solid; */
+        border-radius: 10px;
+    }
+    & a:hover {
+        color: black;
+        background-color:#b5aeae;
+        opacity: 0.8;
+
+    }
+}
+
+
+#navbar1 ul li {
+    height: 20%;
+    display: inline;
+    justify-content: space-between;
+    padding: 5%;
+    & a{
+        /* padding-right: 10%; */
+        font-size: 200%; 
+        text-decoration: none;
+    }
+    & .Search{
+        width: 20%;
+        height: 30px;
+        margin-bottom: 2%;
+    }
+    & .billiardImg{
+        width: 15%;
+        padding-top: 10px;
+    }
+   
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding-top: 1%;
+}
+.grid-container-fifthy{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    font-size: 2rem;
+    & img{
+        justify-content: center;
+        width: 30rem;   
+    }
+    
+}
+footer{
+    background: rgb(50, 143, 50);
+    display: flex;
+    flex: inline;
+    & ul li{
+        padding: 20px;
+        margin: 20px;
+    }
+    &  .mapImg{
+        height: 30vh;
+        width: 30vw;
+    }
 }
