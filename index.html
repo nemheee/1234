@@ -6,45 +6,55 @@
     <meta name="keywords" content="HTML, CSS, JavaScript ">
     <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="./style.css">
     <title>Billiard</title>
+    
 </head>
 <body>
 <header>
-    <nav>
-        <div>
+
+    <nav id="navbar1" >
+
             <ul>
+             
                 <li>
-                    <a href="./index.html"><img src="./img/386853998_6604815339617761_7873882641924711027_n.png" alt="Logo"></a>
+                    <a href="./index.html"><img class="billiardImg" src="./img/billiard.png" alt=""></a>
                 </li>
                 <li>
-                    <input type="text" aria-label="Search">
+                    <input class="Search" type="text" aria-label="Search">
                 </li>
-                <li>
-                    <a href="./html/log-in.html"><img style="width: 3%;" src="./img/5358.webp" alt="Login"></a>
+                <li class="nav-log">
+                    <a class="humanicon" href="./html/log-in.html"><img  src="./img/5358.webp" alt="Login"></a>
+                    
+                   
+                </li>
+                <li class="nav-log">
                     <a href="./html/log-in.html">Login</a>
-                    <a href="./html/tools.html"><img style="width: 3%;" src="./img/il_1080xN.4146295096_gvtc.jpg" alt="Tools"></a>
+                </li>
+                <li class="nav-log">
+                    <a href="./html/tools.html"><img  src="./img/il_1080xN.4146295096_gvtc.jpg" alt="Tools"></a>
                 </li>
             </ul>
-        </div>
     </nav>
-    <nav>
+    <nav id="navbar2">
         
             <ul>
-                <li><a href="./index.html">Нүүр</a></li>
-                <li>  <a href="./html/club.html">Клуб</a></li>
-                <li>   <a href="./html/place.html">Газар</a></li>
-                <li>   <a href="./html/competition.html">Тэмцээн</a></li>
-                <li> <a href="./html/rule.html">Дүрэм</a></li>
+                <li>
+                    <a href="./index.html">Нүүр</a>
+                    <a href="./html/club.html">Клуб</a>
+                    <a href="./html/place.html">Газар</a>
+                    <a href="./html/competition.html">Тэмцээн</a>
+                    <a href="./html/rule.html">Дүрэм</a>
+                </li>
             </ul>
 
     </nav>
 </header>
-<section>
-    <div>
-        <div>
-            <ul>
-                <li><img style="width: 3%;" src="./img/Student-8-ball-Logo.jpg" alt="Competition Image"></li>
+<section class="grid-container">
+    <article>
+        <div >
+            <ul class="grid-container-fifthy">
+                <li><img  src="./img/Student-8-ball-Logo.jpg" alt="Competition Image"></li>
                 <li>
                     <h2>Тэмцээний мэдээлэл 1</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, non.</p>
@@ -54,8 +64,8 @@
             </ul>
         </div>
         <div>
-            <ul>
-                <li><img style="width: 3%;" src="./img/Student-8-ball-Logo.jpg" alt="Competition Image"></li>
+            <ul class="grid-container-fifthy">
+                <li><img  src="./img/Student-8-ball-Logo.jpg" alt="Competition Image"></li>
                 <li>
                     <h2>Тэмцээний мэдээлэл 2</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, non.</p>
@@ -64,7 +74,7 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </article>
     <div>
         <ul>
             <li>Book a Table</li>
@@ -96,9 +106,10 @@
                 <li>
                     <ul>
                        <li>
-                        <a href="https://www.facebook.com/monjoyclub"><img style="width: 3%;" src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a>
+                        <a href="https://www.facebook.com/monjoyclub"><img  src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a>
                        </li>
-
+                       <!-- Add similar markup for other clubs -->
+                    </ul>
                 </li>
             </ul>
             <ul>
@@ -108,7 +119,7 @@
                 <li>
                     <ul>
                        <li><a href="./html/place.html"> <img style="width: 3%;" src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a></li>
-                    
+                       <!-- Add similar markup for other places -->
                     </ul>
                 </li>
             </ul>
@@ -119,7 +130,7 @@
                 <li>
                     <ul>
                        <li><a href="./html/tools.html"> <img style="width: 3%;" src="./img/tools/Kamui_Right_Blue__65915.1512486914.webp" alt="Kamui Cues">Kamui Cues</a></li>
-
+                       <!-- Add similar markup for other tools -->
                     </ul>
                 </li>
             </ul>
@@ -143,15 +154,14 @@
                     <ul>
                         <li>Email: <a href="mailto:contact@example.com">contact@example.com</a></li>
                         <li>Phone: <a href="tel:+123456789">+123456789</a></li>
-                        <li> <a href="https://www.facebook.com/bayrnemeh33"> <img style="width: 3%;" src="./img/360_F_532200355_odKN9Ou3WB6iHWJTFIElFtJbTuzJspY6.webp" alt="Facebook Icon"></a></li>
+                        <li> <a href="https://www.facebook.com/bayrnemeh33"> <img  src="./img/fb.webp" alt="Facebook Icon"></a></li>
                     </ul>
                 </address>
             </li>
             <li>
-                <img src="./img/123.png" alt="Footer Image">
+                <img class="mapImg" src="./img/123.png" alt="Footer Image">
             </li>
         </ul>
-    </div>
 </footer>
 </body>
 </html>

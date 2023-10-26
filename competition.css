@@ -1,0 +1,141 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: white;
+  padding-top: 80 px;
+}
+
+ul > li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100px;
+}
+#navbar1 ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 0;
+}
+
+#navbar1 ul li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar1 ul li a {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#navbar1 .Search {
+  width: 200px;
+  height: 30px;
+}
+
+#navbar1 .billiardImg {
+  width: 30px;
+  padding-top: 10px;
+}
+
+
+#navbar2 {
+  background: rgb(50, 143, 50);
+  padding: 1rem;
+}
+
+#navbar2 ul {
+  list-style: none;
+  padding: 0;
+}
+
+#navbar2 ul li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar2 ul li a {
+  padding: 5px;
+  text-decoration: none;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  background: #b5aeae;
+  padding-left: 5%;
+  padding-right: 4%;
+  border-radius: 10px;
+}
+
+#navbar2 a:hover {
+  color: black;
+  background-color: #b5aeae;
+  opacity: 0.8;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding-top: 4%;
+}
+
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 3px;
+  margin: 25px 0;
+}
+
+table, td, th {
+  border: 1px solid;
+  padding: 8px;
+  text-align: center;
+}
+
+table thead {
+  background-color: #ccc;
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table a {
+  text-decoration: none;
+  color: blue;
+}
+.mapImg{
+  height: 50vh;
+  width: 100vw;
+}
+footer{
+  background: rgb(50, 143, 50);
+  display: grid;
+  flex: inline;
+  &address{
+      padding: 200px;
+      margin: 20px;
+  }
+}
