@@ -44,7 +44,6 @@ img{
         background: #b5aeae;
         padding-left: 3%;
         padding-right: 3%;
-        /* border: 2px solid; */
         border-radius: 10px;
     }
     & a:hover {
@@ -62,7 +61,6 @@ img{
     justify-content: space-between;
     padding: 5%;
     & a{
-        /* padding-right: 10%; */
         font-size: 200%; 
         text-decoration: none;
     }
@@ -101,8 +99,7 @@ img{
     height: 200px;
     border-radius: 50%;
     object-fit: cover; 
-    
-  }
+}
 footer {
     background: rgb(20, 79, 20);
     display: flex;
