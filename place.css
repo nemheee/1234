@@ -101,7 +101,7 @@ img{
     object-fit: cover; 
 }
 footer {
-    background: rgb(20, 79, 20);
+    background:  rgb(20, 79, 20);
     display: flex;
     justify-content: center;
     height: 200px; 
