@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    background: white   ;
+    align-items: center;
+    justify-content: center;
+  }
+  ul>li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  img{
+    width: 100px;
+  }
+  #navbar2{
+    background: rgb(31, 95, 31);
+    padding: 1rem;
+  }
+  #navbar2 ul{
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  #navbar2 ul li {
+    display: inline;
+    justify-content: space-between;   
+    margin: 1rem;
+    align-items: center;
+    padding: 5px;
+    & a{
+        margin-left: 4%;
+        margin-right: 4%;
+        font-size: 2rem; 
+        text-decoration: none;
+        align-items: center;
+        text-align: center;
+        background: #b5aeae;
+        padding-left: 3%;
+        padding-right: 3%;
+        /* border: 2px solid; */
+        border-radius: 10px;
+    }
+    & a:hover {
+        color: black;
+        background-color:#b5aeae;
+        opacity: 0.8;
+  
+    }
+  }
+  
+  
+  #navbar1 ul li {
+    height: 20%;
+    display: inline;
+    justify-content: space-between;
+    padding: 5%;
+    & a{
+        /* padding-right: 10%; */
+        font-size: 200%; 
+        text-decoration: none;
+    }
+    & .Search{
+        width: 20%;
+        height: 30px;
+        margin-bottom: 2%;
+    }
+    & .billiardImg{
+        width: 15%;
+        padding-top: 10px;
+    }
+   
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding-top: 1%;
+  }
+  .grid-container-fifthy{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    font-size: 2rem;
+    & img{
+        justify-content: center;
+        width: 30rem;   
+    }
+  
+  }
+  
+  h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  table {
+    width: 90%;
+    border-collapse: collapse;
+    border-radius: 40px;
+    margin: 40px;
+  }
+  table, tr, th {
+    border: 1px solid;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  table thead {
+    background-color: #ccc;
+    font-weight: bold;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table a {
+    text-decoration: none;
+    color: blue;
+  }
+  .date{
+    width: 0px;
+    padding:0%;
+    margin:auto;
+  }
+  footer {
+    background:rgb(31, 95, 31);
+    display: flex;
+    justify-content: center;
+    height: 200px; 
+  }
+  ul.icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    align-items: center;
+    margin-top: 70px;
+  }       
+  ul.icons li {
+    margin: 0;
+    padding: 0;
+    margin-right: 300px;
+    margin-left: 150px; 
+  
+  }
+  ul.icons li img {
+    max-width: 80px;
+  }  
+  
+  .mapImg{
+    display: inline-block;
+    width: 100%; 
+    height: 300px; 
+    margin: 90;
+    transform: scaleX(1);
+  }
