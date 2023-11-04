@@ -2,19 +2,18 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-body{
+  }
+  body{
     background: white   ;
     align-items: center;
     justify-content: center;
-    /* overflow:hidden; */
-    /* display: flex; */
-}
-ul>li{
+  }
+  ul>li{
     list-style: none;
-}
-a{
+  }
+  a{
     text-decoration: none;
+<<<<<<< HEAD:style.css
 }
 
 
@@ -24,13 +23,22 @@ img{
 
 #navbar2{
     background: rgb(50, 143, 50);
+=======
+  }
+  
+  img{
+    width: 100px;
+  }
+  #navbar2{
+    background: rgb(31, 95, 31);
+>>>>>>> c7006234404292a96bbb388c67264af641b3378e:css/competition.css
     padding: 1rem;
-}
-#navbar2 ul{
+  }
+  #navbar2 ul{
     padding-left: 200px;
     padding-right: 200px;
-}
-#navbar2 ul li {
+  }
+  #navbar2 ul li {
     display: inline;
     justify-content: space-between;   
     margin: 1rem;
@@ -53,12 +61,12 @@ img{
         color: black;
         background-color:#b5aeae;
         opacity: 0.8;
-
+  
     }
-}
-
-
-#navbar1 ul li {
+  }
+  
+  
+  #navbar1 ul li {
     height: 20%;
     display: inline;
     justify-content: space-between;
@@ -84,14 +92,13 @@ img{
         margin-bottom: 20px;
     }
    
-}
-
-.grid-container{
+  }
+  .grid-container{
     display: grid;
     grid-template-columns: 60% 40%;
     padding-top: 1%;
-}
-.grid-container-fifthy{
+  }
+  .grid-container-fifthy{
     display: grid;
     grid-template-columns: 40% 60%;
     font-size: 2rem;
@@ -99,10 +106,54 @@ img{
         justify-content: center;
         width: 30rem;   
     }
+<<<<<<< HEAD:style.css
     
 }
 footer {
     background: rgb(31, 95, 31);
+=======
+  
+  }
+  
+  h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  table {
+    width: 90%;
+    border-collapse: collapse;
+    border-radius: 40px;
+    margin: 40px;
+  }
+  table, tr, th {
+    border: 1px solid;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  table thead {
+    background-color: #ccc;
+    font-weight: bold;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table a {
+    text-decoration: none;
+    color: blue;
+  }
+  .date{
+    width: 0px;
+    padding:0%;
+    margin:auto;
+  }
+  footer {
+    background:rgb(31, 95, 31);
+>>>>>>> c7006234404292a96bbb388c67264af641b3378e:css/competition.css
     display: flex;
     justify-content: center;
     height: 200px; 
@@ -132,5 +183,9 @@ footer {
     height: 300px; 
     margin: 90;
     transform: scaleX(1);
+<<<<<<< HEAD:style.css
   }
   
+=======
+  }
+>>>>>>> c7006234404292a96bbb388c67264af641b3378e:css/competition.css

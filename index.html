@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/competition.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Billiard</title>
+    
 </head>
+
 <body>
-<header>
+    <header>
 
     <nav id="navbar1" >
-        <ul>
-            <li>
-                    <a href="./index.html"><img class="billiardImg" src="./img/billiard.png" alt="billiardImg"></a>
+
+            <ul>
+             
+                <li>
+                    <a href="./index.html"><img class="billiardImg" src="./img/billiard.png" alt=""></a>
                 </li>
                 <li>
-                    <div class="search-bar">
-                        <input class="search-input" type="text" aria-label="Search" placeholder="Search">
-                        <button class="search-button">Search</button>
-                    </div>
+                    <input class="Search" type="text" aria-label="Search">
                 </li>
-                <li class="nav-icon">
-                    <a class="humanicon" href="./html/log-in.html"><img  src="./img/5358.webp" alt="Login"></a>
+                <li class="nav-log">
+                    <a class="humanicon" href="./log-in.html"><img  src="./img/5358.webp" alt="Login"></a>
                 </li>
-                <li class="nav-icon">
+                <li class="nav-log">
                     <a href="./log-in.html">Login</a>
                 </li>
-                <li class="nav-icon">
+                <li class="nav-log">
                     <a href="./html/tools.html"><img  src="./img/il_1080xN.4146295096_gvtc.jpg" alt="Tools"></a>
                 </li>
             </ul>
-    </nav>
-    <nav id="navbar2">
-        
-            <ul>
-                <li>
-                    <a href="./index.html">Нүүр</a>
-                    <a href="./club.html">Клуб</a>
-                    <a href="./place.html">Газар</a>
-                    <a href="./competition.html">Тэмцээн</a>
-                    <a href="./html/rule.html">Дүрэм</a>
-                </li>
-            </ul>
+
+        </nav>
+        <nav id="navbar2">
+
+            <a href="./index.html">Нүүр</a>
+            <a href="./html/club.html">Клуб</a>
+            <a href="./html/place.html">Газар</a>
+            <a href="./html/competition.html">Тэмцээн</a>
+            <a href="./html/rule.html">Дүрэм</a>
 
     </nav>
 </header>
@@ -53,7 +57,7 @@
                 <li>
                     <h2>Тэмцээний мэдээлэл 1</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, non.</p>
-                    <a href="./create.html">Бүртгүүлэх</a>
+                    <a href="/html/signin.html">Бүртгүүлэх</a>
                     <a href="/html/competition.html">Дэлгэрэнгүй</a>
                 </li>
             </ul>
@@ -64,81 +68,81 @@
                 <li>
                     <h2>Тэмцээний мэдээлэл 2</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, non.</p>
-                    <a href="./create.html">Бүртгүүлэх</a>
+                    <a href="/html/signup.html">Бүртгүүлэх</a>
                     <a href="/html/competition.html">Дэлгэрэнгүй</a>
-                </li>
-            </ul>
-        </div>
-    </article>
-    <div>
-        <ul>
-            <li>Book a Table</li>
-            <li>
-                <select name="tariff" id="tariff">
-                    <option selected>Үнэ</option>
-                    <option value="1">11000</option>
-                    <option value="2">12000</option>
-                    <option value="3">13000</option>
-                </select>
-            </li>
-            <li>
-                <select name="time" id="time">
-                    <option selected>Цаг</option>
-                    <option value="05/10/2023 14:00">05/10/2023 14:00</option>
-                    <option value="05/10/2023 15:00">05/10/2023 15:00</option>
-                    <option value="05/10/2023 16:00">05/10/2023 16:00</option>
-                </select>
-            </li>
-            <li><a href="./html/place.html">Захиалах</a></li>
-        </ul>
-    </div>
-    <div>
+                </article>
+            </div>
+
+        </article>
+        <article id="article2">
+            <div>
+                <h2>Ширээ захиалах</h2>
+                <div class="table">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                </div>
+                <button type="submit">Захиалах</button>
+            </div>
+        </article>
+    </section>
+    <section id="section2">
+
+      <div class="top-club">
+        <h1>Toп клубууд</h1>
+        <img src="" alt="billiard-hitter">
         <div>
-            <ul>
-                <li>
-                   <h1>Toп клубууд</h1>
-                </li>
-                <li>
-                    <ul>
-                       <li>
-                        <a href="https://www.facebook.com/monjoyclub"><img  src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a>
-                       </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Toп газрууд</h1>
-                </li>
-                <li>
-                    <ul>
-                       <li><a href="./html/place.html"> <img style="width: 3%;" src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Хэрэгсэл</h1>
-                </li>
-                <li>
-                    <ul>
-                       <li><a href="./html/tools.html"> <img style="width: 3%;" src="./img/tools/Kamui_Right_Blue__65915.1512486914.webp" alt="Kamui Cues">Kamui Cues</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            
         </div>
     </div>
 </section>
-<div><img class="mapImg" src="./img/maps.png" alt="">
-</div>
 <footer>
-      <ul class="icons">
-        <li><img src="./img/icons/map1.png" alt="Map Icon"></li>
-        <li><img src="./img/icons/3158180.png" alt="Mail Icon"></li>
-        <li><img src="./img/icons/call.png" alt="Phone Call Icon"></li>
-        <li><img src="./img/icons/fb.png" alt="Facebook Icon"></li>
-      </ul>
-  </footer>
-  
+    
+        <ul>
+            <li>
+                <h4><a href="./html/about-us.html">About Us</a></li></h4>
+                    <li>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquam ullam placeat? Vel, sapiente maiores.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <address>
+                    
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li>Email: <a href="mailto:contact@example.com">contact@example.com</a></li>
+                        <li>Phone: <a href="tel:+123456789">+123456789</a></li>
+                        <li> <a href="https://www.facebook.com/bayrnemeh33"> <img  src="./img/fb.webp" alt="Facebook Icon"></a></li>
+                    </ul>
+                </address>
+            </li>
+            <li>
+                <img class="mapImg" src="./img/123.png" alt="Footer Image">
+            </li>
+        </ul>
+</footer>
 </body>
+
 </html>
