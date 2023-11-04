@@ -1,161 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/competition.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Billiard</title>
-    
-</head>
-<body>
-<header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <nav id="navbar1" >
+    <title>Billiard</title>
+
+</head>
+
+<body>
+    <header>
+
+        <nav id="navbar1">
 
             <ul>
-             
+
                 <li>
                     <a href="./index.html"><img class="billiardImg" src="./img/billiard.png" alt=""></a>
                 </li>
+                <li class="second-list">
+                    <input class="Search" type="text" aria-label="Search" placeholder="Хайх">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </li>
                 <li>
-                    <input class="Search" type="text" aria-label="Search">
-                </li>
-                <li class="nav-log">
-                    <a class="humanicon" href="./log-in.html"><img  src="./img/5358.webp" alt="Login"></a>
-                </li>
-                <li class="nav-log">
-                    <a href="./log-in.html">Login</a>
-                </li>
-                <li class="nav-log">
-                    <a href="./html/tools.html"><img  src="./img/il_1080xN.4146295096_gvtc.jpg" alt="Tools"></a>
-                </li>
-            </ul>
-    </nav>
-    <nav id="navbar2">
-        
-            <ul>
-                <li>
-                    <a href="./index.html">Нүүр</a>
-                    <a href="./html/club.html">Клуб</a>
-                    <a href="./html/place.html">Газар</a>
-                    <a href="./html/competition.html">Тэмцээн</a>
-                    <a href="./html/rule.html">Дүрэм</a>
+                    <div class="nav-flex">
+                        <a class="humanicon" href="./log-in.html"><img src="./img/5358.webp" alt="Login"></a>
+                        <a href="./log-in.html">Login</a>
+                        <a href="./html/tools.html"><img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="Tools"></a>
+                    </div>
                 </li>
             </ul>
 
-    </nav>
-</header>
-<section class="grid-container">
-    <article>
-        <div >
-            <ul class="grid-container-fifthy">
-                <li><img  src="./img/Student-8-ball-Logo.jpg" alt="Competition Image"></li>
-                <li>
-                    <h2>Тэмцээний мэдээлэл 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, non.</p>
+        </nav>
+        <nav id="navbar2">
+
+            <a href="./index.html">Нүүр</a>
+            <a href="./html/club.html">Клуб</a>
+            <a href="./html/place.html">Газар</a>
+            <a href="./html/competition.html">Тэмцээн</a>
+            <a href="./html/rule.html">Дүрэм</a>
+
+        </nav>
+    </header>
+    <section class="grid-container">
+        <article id="article1">
+            <div class="img-container">
+                <img src="./img/Student-8-ball-Logo.jpg" alt="Competition Image">
+            </div>
+            <div class="competition-details">
+                <h2>Тэмцээний мэдээлэл 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus possimus, aspernatur quaerat
+                    voluptas autem cum voluptatem aut tenetur neque commodi odio nisi illo natus optio. Ex sequi aliquid
+                    voluptatibus est.</p>
+                <article>
                     <a href="/html/signin.html">Бүртгүүлэх</a>
                     <a href="/html/competition.html">Дэлгэрэнгүй</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <ul class="grid-container-fifthy">
-                <li><img  src="./img/Student-8-ball-Logo.jpg" alt="Competition Image"></li>
-                <li>
-                    <h2>Тэмцээний мэдээлэл 2</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, non.</p>
-                    <a href="/html/signup.html">Бүртгүүлэх</a>
+                </article>
+            </div>
+            <div class="img-container">
+                <img src="./img/Student-8-ball-Logo.jpg" alt="Competition Image">
+            </div>
+            <div class="competition-details">
+                <h2>Тэмцээний мэдээлэл 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quia doloremque impedit, illo
+                    blanditiis voluptate incidunt neque consequatur, ullam quidem, ipsa exercitationem quos veritatis
+                    consectetur dolore nesciunt nam fugit consequuntur?</p>
+                <article>
+                    <a href="/html/signin.html">Бүртгүүлэх</a>
                     <a href="/html/competition.html">Дэлгэрэнгүй</a>
-                </li>
-            </ul>
-        </div>
-    </article>
-    <div>
-        <ul>
-            <li>Book a Table</li>
-            <li>
-                <select name="tariff" id="tariff">
-                    <option selected>Үнэ</option>
-                    <option value="1">11000</option>
-                    <option value="2">12000</option>
-                    <option value="3">13000</option>
-                </select>
-            </li>
-            <li>
-                <select name="time" id="time">
-                    <option selected>Цаг</option>
-                    <option value="05/10/2023 14:00">05/10/2023 14:00</option>
-                    <option value="05/10/2023 15:00">05/10/2023 15:00</option>
-                    <option value="05/10/2023 16:00">05/10/2023 16:00</option>
-                </select>
-            </li>
-            <li><a href="./html/place.html">Захиалах</a></li>
-        </ul>
-    </div>
-    <div>
+                </article>
+            </div>
+
+        </article>
+        <article id="article2">
+            <div>
+                <h2>Ширээ захиалах</h2>
+                <div class="table">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                    <img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="">
+                </div>
+                <button type="submit">Захиалах</button>
+            </div>
+        </article>
+    </section>
+    <section id="section2">
+
+      <div class="top-club">
+        <h1>Toп клубууд</h1>
+        <img src="" alt="billiard-hitter">
         <div>
-            <ul class="grid-container">
-                <li>
-                   <h1>Toп клубууд</h1>
-                </li>
-                <li>
-                    <ul>
-                       <li class="item1">
-                        <a href="https://www.facebook.com/monjoyclub"><img  src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a>
-                       </li>
-                       <li class="item2">
-                        <a href="https://www.facebook.com/monjoyclub"><img  src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a>
-                       </li>
-                       <li class="item3">
-                        <a href="https://www.facebook.com/monjoyclub"><img  src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a>
-                       </li>
-                       <li class="item4">
-                        <a href="https://www.facebook.com/monjoyclub"><img  src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a>
-                       </li>
-                       <li class="item5">
-                        <a href="https://www.facebook.com/monjoyclub"><img  src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a>
-                       </li>
-                       <li class="item6">
-                        <a href="https://www.facebook.com/monjoyclub"><img  src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a>
-                       </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Toп газрууд</h1>
-                </li>
-                <li>
-                    <ul>
-                       <li><a href="./html/place.html"> <img style="width: 3%;" src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg" alt="Monjoy Club Logo">Monjoy</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Хэрэгсэл</h1>
-                </li>
-                <li>
-                    <ul>
-                       <li><a href="./html/tools.html"> <img style="width: 3%;" src="./img/tools/Kamui_Right_Blue__65915.1512486914.webp" alt="Kamui Cues">Kamui Cues</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            <a href="https://www.facebook.com/monjoyclub"><img
+                    src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                    alt="Monjoy Club Logo"><br>Monjoy</a>
+            
         </div>
-    </div>
-</section>
-<div class="mapImg"> <img src="./img/map123.png" alt=""></div>
-<footer>
-    <address>
-      <ul class="icons">
-        <li><img src="./img/map-logo-30.jpg" alt="Map Icon"></li>
-        <li><img src="./img/image_processing20210717-12803-emxyw3.png" alt="Mail Icon"></li>
-        <li><img src="./img/2jhd30g.jpg" alt="Phone Call Icon"></li>
-        <li><img src="./img/91933.png" alt="Facebook Icon"></li>
-      </ul>
-    </address>
-  </footer>
+      </div>
+      <div class="onch-ugs">
+        <img src="./img/background1.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, asperiores?</p>
+        <a href="./html/club.html"><button>Клуб</button></a>
+      </div>
+
+
+
+
+    </section>
+    <section id="section3">
+        <div class="onch-ugs">
+            <img src="./img/background1.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, asperiores?</p>
+            <a href="./html/place.html"><button>Газар</button></a>
+          </div>
+    
+        <div class="top-club">
+          <h1>Toп клубууд</h1>
+          <img src="" alt="billiard-hitter">
+          <div>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>Monjoy</a>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>Monjoy</a>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>Monjoy</a>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>Monjoy</a>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>Monjoy</a>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>Monjoy</a>
+              
+          </div>
+        </div>
+      </section>
+      <section id="section4">
+
+        <div class="top-club">
+          <h1>Хэрэгсэл</h1>
+          <div>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>
+                      <p>Action Adventure 101</p>
+                      <p>Action</p>
+                      <p>500,000$</p>
+                    </a>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>
+                      <p>Action Adventure 101</p>
+                      <p>Action</p>
+                      <p>500,000$</p>
+                    </a>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>
+                      <p>Action Adventure 101</p>
+                      <p>Action</p>
+                      <p>500,000$</p>
+                    </a>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>
+                      <p>Action Adventure 101</p>
+                      <p>Action</p>
+                      <p>500,000$</p>
+                    </a>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>
+                      <p>Action Adventure 101</p>
+                      <p>Action</p>
+                      <p>500,000$</p>
+                    </a>
+              <a href="https://www.facebook.com/monjoyclub"><img
+                      src="./img/club/384554669_720589036578882_7329377103344962302_n.jpg"
+                      alt="Monjoy Club Logo"><br>
+                      <p>Action Adventure 101</p>
+                      <p>Action</p>
+                      <p>500,000$</p>
+                    </a>
+             
+              
+          </div>
+        </div>
+        <div class="onch-ugs">
+            <img src="./img/background1.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, asperiores?</p>
+            <a href="./html/order.html"><button>Дэлгүүр</button></a>
+          </div>
+  
+  
+  
+  
+      </section>
+    <div class="mapImg"> <img src="./img/map123.png" alt=""></div>
+    <footer>
+        <address>
+            <ul class="icons">
+                <li><img src="./img/map-logo-30.jpg" alt="Map Icon"></li>
+                <li><img src="./img/image_processing20210717-12803-emxyw3.png" alt="Mail Icon"></li>
+                <li><img src="./img/2jhd30g.jpg" alt="Phone Call Icon"></li>
+                <li><img src="./img/91933.png" alt="Facebook Icon"></li>
+            </ul>
+        </address>
+    </footer>
 
 </body>
+
 </html>

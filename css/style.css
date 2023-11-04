@@ -1,5 +1,5 @@
 :root{
---color-white:#f0f0f0;
+--color-white: white;
 --color-dark-0:#000;
 --color-dark-1:#222;
 
@@ -34,29 +34,20 @@ img{
 
 #navbar2{
     background: rgb(50, 143, 50);
-    padding: 1rem;
 }
-#navbar2 ul{
-    padding-left: 200px;
-    padding-right: 200px;
-}
-#navbar2 
 
-li {
-    display: inline;
-    justify-content: space-between;   
-    margin: 1rem;
+#navbar2  {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    padding: 5px;
     & a{
-        margin-right: 4%;
         font-size: 2rem; 
         text-decoration: none;
         align-items: center;
         text-align: center;
         background: #b5aeae;
-        padding-left: 3%;
-        padding-right: 3%;
+        padding-left: 5%;
+        padding-right: 5%;
         /* border: 2px solid; */
         border-radius: 10px;
     }
@@ -69,34 +60,12 @@ li {
 }
 
 
-#navbar1 ul li {
-    height: 20%;
-    display: inline;
-    justify-content: space-between;
-    padding: 5%;
-    & a{
-        /* padding-right: 10%; */
-        font-size: 200%; 
-        text-decoration: none;
-    }
-    & .Search{
-        width: 20%;
-        height: 30px;
-        margin-bottom: 2%;
-    }
-    & .billiardImg{
-        width: 15%;
-        padding-top: 10px;
-    }
-   
-}
-
-.grid-container{
+/* .grid-container{
     display: grid;
     grid-template-columns: 60% 40%;
     padding-top: 1%;
-}
-.grid-container-fifthy{
+} */
+/* .grid-container-fifthy{
     display: grid;
     grid-template-columns: 40% 60%;
     font-size: 2rem;
@@ -105,7 +74,7 @@ li {
         width: 30rem;   
     }
     
-}
+} */
 /* Footer styles */
 /* Footer styles */
 /* Footer styles */
@@ -145,13 +114,7 @@ footer {
         text-decoration: none;
     }
     
-    & .mapImg {
-        max-width: 60rem;
-        max-height: 20rem;
-        width:100%;
-        height: auto;
-        margin-bottom: -2rem;
-    }
+    
     
     
     
@@ -198,11 +161,192 @@ ul.icons li img {
     transform: scaleX(1);
   }
   
-
+.nav-flex{
+    display: flex;
+    align-items: center;
+}
   
+#navbar1{
+& ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5rem;
+    & li{
+        padding: 0px;
+        & div a{
+            margin: 0px 1rem;
+        }
+        & input::placeholder {
+            font-size: 1.5rem;
+            padding-left: 0.5rem;
+          }
+          
+        &  .Search {
+            width: 70% ;
+            height: 3.5rem;
+            margin-bottom:  0;
+            border-radius: 1rem;
+            font-size: 1.5rem;
+            padding-left: 0.5rem;
+            
+        }
+
+    }
+   
+}
+}
 
 
+#navbar2 ul {
+    margin: 0rem;
+    padding: 0rem;
+}
+.second-list{
+    width: 100%;
+    margin-right: 2rem;
+}
+.billiardImg{
+    width: 50% !important;
+}
 
+#article1{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 1rem;
+    align-items: center;
+    padding: 4rem 0rem;
+    & .img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        padding-left: 5rem;
+        & img {
+            border-radius: 50%;
+            object-fit: contain;
+            width: 15rem;
+            height: 15rem;
+            border: solid 1px black;
+
+        }
+    }
+    & .competition-details{
+        background-color: rgb(173, 228, 173);
+        padding: 2rem;
+        width: 60%;
+        margin: auto;
+        border-radius: 3rem;
+        & h2{
+            margin-top: 0rem;
+        }
+        & article{
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-around;
+            & a{
+             background-color: pink;   
+             padding: 1rem;
+             border-radius: 1rem;
+             color: black;
+            }
+        }
+    }
+}
+#article2{
+    
+   
+    /* position: relative; */
+    & div{
+        background-image: url(../img/background1.png);
+        background-repeat: no-repeat;
+        height: 100%;
+        & h2 {
+            color:white
+            
+        }
+        & button{
+            /* position: absolute; */
+            bottom : 2rem;
+            margin-left: 70%;
+        }
+        & .table{
+        background-color: white;
+          display: grid;    
+          height: 60%;
+          padding-top: 50rem;
+          margin-top: 5rem;
+          grid-template-columns: auto auto auto;
+            gap : 2rem;
+            padding: 5rem;
+            /* position: absolute; */
+            /* bottom: 50%;
+            left: 45%; */
+            & img {
+                padding: 0px;
+                margin: 0px;
+            }
+
+        }
+        /* & img{
+            position: absolute;
+            bottom: 50%;
+            left: 45%;
+        } */
+    }
 
     
-    
+}
+
+#section2 , #section3 , #section4 {
+    margin-top: 8rem;
+    margin-left: -8rem;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    & .top-club{
+        
+        & div{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 5rem;
+            & img {
+                object-fit: contain;
+                width: 10rem;
+
+            }
+        }
+    }
+    & .onch-ugs{
+        position: relative;
+        & button{
+            position: absolute;
+            bottom: 40%;
+            left: 45%;
+            width: 10rem;
+            height: 2rem;
+            text-align: center;
+        }
+        & p {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            color: white;
+        }
+        & img{
+            width: 30rem;
+        }
+    }   
+}
+#section4 {
+    & p{
+        color: black;
+    }
+}
+
+.mapImg {
+    width:100%;  
+    height: auto;
+    & img {
+        width: 100% !important;
+    }
+}
