@@ -4,6 +4,7 @@
   margin: 0;
 }
 body{
+  background-color: #f0f0f0; 
   background: white   ;
   align-items: center;
   justify-content: center;
@@ -75,10 +76,20 @@ img{
   }
  
 }
+.background {
+  background-image: url('./img/background.png'); 
+  width: 100%;
+  height: 80vh;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center center; 
+}
+
 .grid-container{
   display: grid;
   grid-template-columns: 60% 40%;
   padding-top: 1%;
+  height: max-content;
 }
 .grid-container-fifthy{
   display: grid;
@@ -96,37 +107,79 @@ h2 {
   margin: 20px 0;
   text-align: center;
 }
-
-table {
-  width: 90%;
-  border-collapse: collapse;
-  border-radius: 40px;
-  margin: 40px;
-}
-table, tr, th {
-  border: 1px solid;
-  padding: 8px;
+.container,.container-2{
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  margin:10px;
+  height: 70%;
+  border: 1px solid black;
+  margin: 200px;
   text-align: center;
+  background-color: white;
+}
+.container-1{
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  height: 70%;
+  border: 1px solid black;
+  margin: 50px;
+  text-align: center;
+  background-color: white;
+  top: -270px;
+}
+.container-2{
+  top: -33%;
+}
+.ognoo{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 40px;
+   color: rgb(0, 99, 0);
+}
+.text, .text-1, .text-2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 150%;
+}
+.button{
+  width: 40%;
+  height: 5%;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color:darkgreen;
+  color: white;
+  border: none;
+}
+.path {
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  position: absolute;
+  animation: move 10s linear infinite;
 }
 
-table thead {
-  background-color: #ccc;
-  font-weight: bold;
+.rect-path {
+  offset-path: rect(50px 150px 200px 50px round 20%);
+  background: green;
 }
 
-table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
 
-table a {
-  text-decoration: none;
-  color: blue;
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+    background-color: red;
+  }
+  100% {
+    offset-distance: 100%;
+  }
 }
-.date{
-  width: 0px;
-  padding:0%;
-  margin:auto;
-}
+hr{
+  background-color: rgb(243, 192, 192);
+  border-top: 3px dotted rgb(10, 53, 245);
+  height: 3px;
+  width: 50%;
+ }
+
 footer {
   background:rgb(31, 95, 31);
   display: flex;
@@ -149,8 +202,13 @@ ul.icons li {
 
 }
 ul.icons li img {
-  max-width: 80px;
-}  
+  max-width: 40px;
+}
+ul.icons li img.PhoneCall,
+ul.icons li img.FacebookIcon {
+  border-radius: 60%;
+  object-fit: cover;
+} 
 
 .mapImg{
   display: inline-block;
