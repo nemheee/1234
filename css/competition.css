@@ -96,8 +96,50 @@
     margin: 20px 0;
     text-align: center;
   }
+  .con{
+    background-image: url("./x");
+  }
+  .container {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 15px;
+    text-align: center;
+  }
   
-  table {
+  .path {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    animation: move 10s linear infinite;
+  }
+  
+  .rect-path-1 {
+    offset-path: rect(50px auto 200px auto);
+  }
+  
+  .rect-path-2 {
+    offset-path: rect(50px auto 200px auto);
+  }
+  
+  .rect-path-3 {
+    offset-path: rect(50px auto 200px auto);
+  }
+  
+  @keyframes move {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+  
+  
+  /*table {
     width: 90%;
     border-collapse: collapse;
     border-radius: 40px;
@@ -121,7 +163,7 @@
   table a {
     text-decoration: none;
     color: blue;
-  }
+  }*/
   .date{
     width: 0px;
     padding:0%;
