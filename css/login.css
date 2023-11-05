@@ -1,0 +1,48 @@
+body{
+    background-image: url(login_image.png);
+    width: 98%;
+    margin: 0rem;
+    & main{
+        & section{
+            & article{
+                margin-left: 35%;
+                width: 30%;
+                text-align: center;
+                margin-top: 10rem;
+                color: white;
+                & ul{
+                    list-style: none;
+                    & .pass{
+                        float: right;
+                    }
+                    & a{
+                        color: black;
+                        text-decoration: none;
+                        float: left;
+                        margin-top: 1rem;
+                        font-size: 1rem;
+                    }
+                    & input{
+                        width: 100%;
+                        margin: 0.5rem;
+                        height: 2rem;
+                    }
+                    & .checkbox{
+                        transform: scale(0.5);
+                        float: left;
+                    }
+                    & .button{
+                        font-weight: bold;
+                        width: 100%;
+                        margin: 0.5rem;
+                        height: 2rem;
+                    }
+                }
+                & h{
+                    color: white;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
