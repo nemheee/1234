@@ -113,14 +113,7 @@ footer {
         color: #fff;
         text-decoration: none;
     }
-    
-    
-    
-    
-    
 }
-
-
 @media  (max-width:1750px){
     #navbar2{
         display: none;
@@ -196,8 +189,6 @@ ul.icons li img {
    
 }
 }
-
-
 #navbar2 ul {
     margin: 0rem;
     padding: 0rem;
