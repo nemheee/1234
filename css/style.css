@@ -78,7 +78,7 @@ img{
 /* Footer styles */
 /* Footer styles */
 /* Footer styles */
-footer {
+/* footer {
     background-color:rgb(50, 143, 50);
     color: var(--color-menu);
     padding-bottom: 2rem;
@@ -113,7 +113,7 @@ footer {
         color: #fff;
         text-decoration: none;
     }
-}
+} */
 @media  (max-width:1750px){
     #navbar2{
         display: none;
@@ -121,6 +121,7 @@ footer {
 }
 
 footer {
+
     background: rgb(20, 79, 20);
     display: flex;
     justify-content: center;
