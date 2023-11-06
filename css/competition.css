@@ -106,8 +106,9 @@
   .container {
     position: relative;
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 600px;
+    margin: 10px;
     border: 1px solid black;
     margin: 15px;
     text-align: center;
@@ -132,7 +133,11 @@
   .rect-path-3 {
     offset-path: rect(50px auto 200px auto);
   }
-  
+  .p1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10px;
+    color: rgb(4, 97, 4);
+  }
   @keyframes move {
     0% {
       offset-distance: 0%;
