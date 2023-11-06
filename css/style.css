@@ -5,6 +5,12 @@
 --color-bg-default: rgb(7, 74, 7);
 --color-menu:var(--color-dark-1);
 --color-hover:rgb(55, 0, 255);
+--color-main:#1E4620;
+--color-text-white:white;
+--color-text-balck: black;
+--text-button:1.2rem;
+--background-white : white;
+
 }
 *{
     box-sizing: border-box;
@@ -15,8 +21,7 @@ body{
     background: var(--color-white);
     align-items: center;
     justify-content: center;
-    /* overflow:hidden; */
-    /* display: flex; */
+    font-family:  'Mulish', sans-serif;
 }
 
 li{
@@ -212,7 +217,7 @@ ul.icons li img {
         display: flex;
         justify-content: center;
         align-items: center ;
-        padding-left: 5rem;
+        padding-left: 15rem;
         & img {
             border-radius: 50%;
             object-fit: contain;
@@ -223,11 +228,14 @@ ul.icons li img {
         }
     }
     & .competition-details{
-        background-color: rgb(173, 228, 173);
+        background-color: #1E4620;
         padding: 2rem;
-        width: 60%;
+        width: 75%;
         margin: auto;
         border-radius: 3rem;
+        & p , h2{
+            color : var(--color-text-white)
+        }
         & h2{
             margin-top: 0rem;
         }
@@ -236,7 +244,7 @@ ul.icons li img {
             display: flex;
             justify-content: space-around;
             & a{
-             background-color: white;   
+             background-color: var(--background-white);   
              padding: 1rem;
              border-radius: 1rem;
              color: black;
@@ -300,19 +308,19 @@ ul.icons li img {
     justify-content: space-around;
     text-align: left;
     & .top-club{
-        
+        padding-left: 5rem;
         & div{
             display: grid;
             grid-template-columns: auto auto auto;
-            gap: 5rem;
+            gap: 7rem;
             & a{
                 text-align: center;
                 border: solid 1px rgb(197, 197, 197);
                 color: black;
                 & img {
                 /* object-fit: contain; */
-                width: 10rem;
-                height: 10rem;
+                width: 12rem;
+                height: 12rem;
                 margin: 0.5rem;
 
             }
@@ -328,22 +336,26 @@ ul.icons li img {
     }
     & .onch-ugs{
         position: relative;
+        padding-left: 4rem;
         & button{
             position: absolute;
             bottom: 40%;
-            left: 45%;
+            left: 55%;
             width: 10rem;
             height: 2rem;
+            font-size: var(--text-button)
             text-align: center;
         }
         & p {
             position: absolute;
-            top: 20%;
-            left: 10%;
+            top: 30%;
+            width: 60%;
+            font-size: 1.2rem;
+            left: 30%;
             color: white;
         }
         & img{
-            width: 30rem;
+            width: 40rem;
         }
     }   
 }

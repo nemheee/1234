@@ -1,5 +1,5 @@
 body{
-    background-image: url(login_image.png);
+    background-image: url(../img/login-bg.png);
     width: 98%;
     margin: 0rem;
     & main{
@@ -16,7 +16,7 @@ body{
                         float: right;
                     }
                     & a{
-                        color: black;
+                        color: white;
                         text-decoration: none;
                         float: left;
                         margin-top: 1rem;
