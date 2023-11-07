@@ -92,9 +92,10 @@
   }
 
   h2 {
-    font-size: 26px;
-    margin: 20px 0;
-    text-align: center;
+    font-size: 1.4rem;
+    font-family:  'Mulish', sans-serif;
+    margin:  20px 0;
+    text-align: left;
   }
   .con{
     background-image: url('');
