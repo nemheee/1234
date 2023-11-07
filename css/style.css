@@ -1,211 +1,41 @@
 :root{
---color-white: white;
---color-dark-0:#000;
---color-dark-1:#222;
---color-bg-default: rgb(7, 74, 7);
---color-menu:var(--color-dark-1);
---color-hover:rgb(55, 0, 255);
---color-main:#1E4620;
---color-text-white:white;
---color-text-balck: black;
---text-button:1.2rem;
---background-white : white;
-
-}
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-body{
-    background: var(--color-white);
-    align-items: center;
-    justify-content: center;
-    font-family:  'Mulish', sans-serif;
-}
-
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
-
-img{
-    width: 100px;
-}
-
-#navbar2{
-    background-color: var(--color-bg-default);
-}
-
-#navbar2  {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    & a{
-        font-size: 2rem; 
-        text-decoration: none;
-        align-items: center;
-        text-align: center;
-        background: #b5aeae;
-        padding-left: 5%;
-        padding-right: 5%;
-        /* border: 2px solid; */
-        border-radius: 10px;
-        color: black;
+    --color-white: white;
+    --color-dark-0:#000;
+    --color-dark-1:#222;
+    --color-bg-default: rgb(7, 74, 7);
+    --color-menu:var(--color-dark-1);
+    --color-hover:rgb(55, 0, 255);
+    --color-main:#1E4620;
+    --color-text-white:white;
+    --color-text-balck: black;
+    --text-button:1.2rem;
+    --background-white : white;
     }
-    & a:hover {
-        color: white;
-        background-color: var(--color-bg-default);
-        border: 1px solid white;
-        opacity: 0.8;
-
-    }
-}
-
-
-/* .grid-container{
-    display: grid;
-    grid-template-columns: 60% 40%;
-    padding-top: 1%;
-} */
-/* .grid-container-fifthy{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    font-size: 2rem;
-    & img{
-        justify-content: center;
-        width: 30rem;   
-    }
-    
-} */
-/* Footer styles */
-/* Footer styles */
-/* Footer styles */
-/* footer {
-    background-color:rgb(50, 143, 50);
-    color: var(--color-menu);
-    padding-bottom: 2rem;
-    & .footer-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-    & .about h2, .contact h3 {
-        font-size: 18px;
-        color: white;
-        text-decoration: none;
-    }
-    & .about p {
-        font-size: 14px;
-    }
-    & .about{
-        padding: 4rem;
-    }
-    & .contact{
-        padding: 4rem;
-    }
-    & .contact ul, .contact li {
-        list-style: none;
+    *{
+        box-sizing: border-box;
         padding: 0;
+        margin: 0;
     }
-    & .contact ul li {
-        margin-bottom: 10px;
+    body{
+        background: var(--color-white);
+        align-items: center;
+        justify-content: center;
+        font-family:  'Mulish', sans-serif;
+    }
+    .mapImg img {
+        display: block;
+        width: 100%;
+        height: auto; /* Changed to auto for responsive height */
+        margin-top: 1rem; /* Changed to a fixed margin for consistency */
+    }
+  
+
+    .second-list {
+        margin-right: 2rem;
     }
     
-    & .contact a {
-        color: #fff;
-        text-decoration: none;
-    }
-} */
-@media  (max-width:1750px){
-    #navbar2{
-        display: none;
-    }
-}
-
-footer {
-
-    background: var(--color-bg-default);
-    display: flex;
-    justify-content: center;
-    height: 200px; 
-}
-ul.icons {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex; 
-    align-items: center;
-    margin-top: 70px;
-}       
-ul.icons li {
-    margin: 0;
-    padding: 0;
-    margin-right: 300px;
-    margin-left: 150px; 
+    /* Styling for the billiard image */
   
-  }
-ul.icons li img {
-    max-width: 80px;
-}  
-
-
-.mapImg{
-    display: inline-block;
-    width: 100%; 
-    height: 300px; 
-    margin: 90;
-    transform: scaleX(1);
-  }
-  
-.nav-flex{
-    display: flex;
-    align-items: center;
-}
-  
-#navbar1{
-& ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 5rem;
-    & li{
-        padding: 0px;
-        & div a{
-            margin: 0px 1rem;
-        }
-        & input::placeholder {
-            font-size: 1.5rem;
-            padding-left: 0.5rem;
-          }
-          
-        &  .Search {
-            width: 70% ;
-            height: 3.5rem;
-            margin-bottom:  0;
-            border-radius: 1rem;
-            font-size: 1.5rem;
-            padding-left: 0.5rem;
-            
-        }
-
-    }
-   
-}
-}
-#navbar2 ul {
-    margin: 0rem;
-    padding: 0rem;
-}
-.second-list{
-    width: 100%;
-    margin-right: 2rem;
-}
-.billiardImg{
-    width: 50% !important;
-}
 
 #article1{
     display: grid;
@@ -217,7 +47,7 @@ ul.icons li img {
         display: flex;
         justify-content: center;
         align-items: center ;
-        padding-left: 15rem;
+        margin: auto;
         & img {
             border-radius: 50%;
             object-fit: contain;
@@ -229,7 +59,7 @@ ul.icons li img {
     }
     & .competition-details{
         background-color: #1E4620;
-        padding: 2rem;
+        padding: 1rem;
         width: 75%;
         margin: auto;
         border-radius: 3rem;
@@ -257,12 +87,14 @@ ul.icons li img {
     }
 }
 #article2{
-    
+    .rep-image{
+        width: 90%;
+        padding: 1rem, 5%;
+        margin: 1rem 5%;
+    }
    
     /* position: relative; */
     & div{
-        background-image: url(../img/background1.png);
-        background-repeat: no-repeat;
         height: 100%;
         & h2 {
             color:white
@@ -302,17 +134,14 @@ ul.icons li img {
 }
 
 #section2 , #section3 , #section4 {
-    margin-top: 8rem;
-    margin-left: -8rem;
+    margin-top: 2%;
     display: flex;
     justify-content: space-around;
-    text-align: left;
     & .top-club{
-        padding-left: 5rem;
         & div{
             display: grid;
             grid-template-columns: auto auto auto;
-            gap: 7rem;
+            gap: 5%;
             & a{
                 text-align: center;
                 border: solid 1px rgb(197, 197, 197);
@@ -343,7 +172,7 @@ ul.icons li img {
             left: 55%;
             width: 10rem;
             height: 2rem;
-            font-size: var(--text-button)
+            font-size: var(--text-button);
             text-align: center;
         }
         & p {
@@ -355,9 +184,16 @@ ul.icons li img {
             color: white;
         }
         & img{
-            width: 40rem;
+            width: 90%;
+            padding: 2rem 5%;
+            margin: 2rem 5%;
         }
     }   
+}
+#section3 {
+    & img{
+        text-align: center;
+    }
 }
 #section4 {
     & p{
@@ -374,6 +210,7 @@ ul.icons li img {
         color: var(--color-hover);
     }
     padding-bottom: 1rem;
+    margin-bottom: 2%;
 }
 
 .mapImg {
@@ -381,5 +218,47 @@ ul.icons li img {
     height: auto;
     & img {
         width: 100% !important;
+    }
+}
+/* Existing CSS styles */
+/* ... */
+
+/* Media query for screens that are 768px wide or less */
+@media (max-width: 1050px) {
+     #navbar2 a {
+        display: none;
+    }
+    .grid-container{
+        display: block;
+    }
+    #section2, #section3, #section4{
+        display: block;
+    }
+}
+@media(max-width:600px ){
+    #article1{
+        display: block;
+        padding: 4rem;
+        & div{
+            gap: 10rem;
+        }
+        
+    }
+}
+@media(max-width:510px){
+    .competition-details .button {
+        display: block;
+    }
+}
+.subtitle{
+    text-align: left;
+    padding-left: 4rem;
+    padding-top: 2rem;
+    & h2{
+        color: var(--color-dark-0);
+        font-size: 2rem;
+    }
+    & p{
+        font-size: 1rem;
     }
 }
