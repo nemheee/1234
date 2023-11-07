@@ -101,56 +101,108 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
-  
-  
+.containers-row{
+  display: flex;
+  justify-content: space-between;
+}
+.background {
+  background-image: url('../img/icons/bg.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center;
+  width:100%;
+  height: 90vh; 
+}
   .container {
     position: relative;
     display: inline-block;
-    width: 500px;
-    height: 600px;
-    margin: 10px;
+    width: 600px;
+    height: 800px;
+    margin: 10px auto;
     border: 1px solid black;
-    margin: 15px;
+    padding: 20px;
     text-align: center;
+    background-color: white;
+    margin-left: 160px;
+    top: 50px;
+    
   }
-  
-  .path {
-    width: 40px;
-    height: 40px;
-    background-color: red;
-    position: absolute;
-    animation: move 10s linear infinite;
-  }
-  
-  .rect-path-1 {
-    offset-path: rect(50px auto 200px auto);
-  }
-  
-  .rect-path-2 {
-    offset-path: rect(50px auto 200px auto);
-  }
-  
-  .rect-path-3 {
-    offset-path: rect(50px auto 200px auto);
-  }
-  .p1{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 10px;
+
+  .container .p1 {
+    font-family: 'Mulish', 'sana serif';
+    font-size: 30px; 
     color: rgb(4, 97, 4);
-  }
-  @keyframes move {
-    0% {
+}
+.p2 {
+  font-family: 'Mulish', 'sana serif';
+  font-size: 20px;
+  border-bottom: 1px dotted #000;
+}
+
+.link {
+  display: inline; 
+  margin-left: 10px;
+}
+
+.date {
+  width: 100px; 
+  height: 100px; 
+  background-size: cover;
+  position: center;
+  margin-left: 230px;
+
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px; 
+
+}
+
+li {
+  margin: 10px 0;
+  /*border-bottom: 1px dotted #000; */
+
+}
+.button {
+    background-color: rgb(10, 116, 10);
+    font-size: 18px;
+    width: 200px; 
+    height: 50px; 
+    padding: 10px 20px; 
+    color: white; 
+    margin: 0;
+}
+.path {
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  position: absolute;
+  animation: move 10s linear infinite;
+  border-radius: 50%; 
+}
+
+.rect-path-1 {
+  offset-path: circle(30% at center);
+}
+
+.rect-path-2 {
+  offset-path: circle(30% at center); 
+}
+
+.rect-path-3 {
+  offset-path: circle(30% at center); 
+}
+
+@keyframes move {
+  0% {
       offset-distance: 0%;
-    }
-    100% {
+  }
+  100% {
       offset-distance: 100%;
-    }
   }
-  .date{
-    width: 0px;
-    padding:0%;
-    margin:auto;
-  }
+}
+
   footer {
     background:rgb(31, 95, 31);
     display: flex;
@@ -179,8 +231,8 @@
   .mapImg{
     display: inline-block;
     width: 100%; 
-    height: 300px; 
-    margin: 90;
+    height: 10%; 
+    margin: 0px;
     transform: scaleX(1);
   }
   .img{
