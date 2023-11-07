@@ -183,3 +183,6 @@
     margin: 90;
     transform: scaleX(1);
   }
+  .img{
+    background-image: url(../img/123.png);
+  }

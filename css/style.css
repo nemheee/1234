@@ -343,7 +343,7 @@ ul.icons li img {
             left: 55%;
             width: 10rem;
             height: 2rem;
-            font-size: var(--text-button)
+            font-size: var(--text-button);
             text-align: center;
         }
         & p {
