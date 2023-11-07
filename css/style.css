@@ -312,7 +312,7 @@ ul.icons li img {
         & div{
             display: grid;
             grid-template-columns: auto auto auto;
-            gap: 7rem;
+            gap: 10%;
             & a{
                 text-align: center;
                 border: solid 1px rgb(197, 197, 197);
