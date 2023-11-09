@@ -55,7 +55,7 @@ img{
 }
 
 
-#navbar1 ul li {
+/* #navbar1 ul li {
     height: 20%;
     display: inline;
     justify-content: space-between;
@@ -74,7 +74,7 @@ img{
         padding-top: 10px;
     }
    
-}
+} */
   
 .mapImg{
     display: inline-block;
