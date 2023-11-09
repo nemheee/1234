@@ -87,6 +87,7 @@
     }
 }
 #article2{
+   
     .rep-image{
         width: 90%;
         padding: 1rem, 5%;
@@ -96,6 +97,8 @@
     /* position: relative; */
     & div{
         height: 100%;
+        background-image: url(../img/background1.png);
+        background-repeat: no-repeat;
         & h2 {
             color:white
             
