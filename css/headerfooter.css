@@ -1,0 +1,93 @@
+#navbar2  {
+    background-color: var(--color-bg-default);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & a{
+        font-size: 2rem; 
+        text-decoration: none;
+        align-items: center;
+        text-align: center;
+        background: #b5aeae;
+        padding-left: 5%;
+        padding-right: 5%;
+        /* border: 2px solid; */
+        border-radius: 10px;
+        color: black;
+    }
+    & a:hover {
+        color: white;
+        background-color: var(--color-bg-default);
+        border: 1px solid white;
+        opacity: 0.8;
+
+    }
+    & ul {
+        margin: 0rem;
+        padding: 0rem;
+    }
+}
+#navbar1{
+    & .humanicon img{
+        width: 3rem;
+    }
+    & .billardicon img{
+        width: 3rem;
+    }
+    & .nav-flex{
+        display: flex;
+        align-items: center;
+    }
+    & ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 5rem;
+        & li{
+            padding: 0px;
+            & div a{
+                margin: 0px 1rem;
+            }
+            & input::placeholder {
+                font-size: 1.5rem;
+                padding-left: 0.5rem;
+              }
+              
+            &  .Search {
+                width: 70% ;
+                height: 3.5rem;
+                margin-bottom:  0;
+                border-radius: 1rem;
+                font-size: 1.5rem;
+                padding-left: 0.5rem;
+                
+            }
+    
+        }
+       
+    }
+    }
+    footer {
+        background:rgb(31, 95, 31);
+        display: flex;
+        
+        height: 200px; 
+        & ul.icons {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; 
+            margin-top: 70px;
+            
+          }       
+          &  ul.icons li {
+            margin: 0;
+            padding: 0;
+            margin: 1rem 40%;
+          
+          }
+          &  ul.icons li img {
+            max-width: 80px;
+          }  
+      }
+      
