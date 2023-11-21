@@ -127,12 +127,6 @@ img{
         text-decoration: none;
     }
 } */
-@media  (max-width:1750px){
-    #navbar2{
-        display: none;
-    }
-}
-
 footer {
 
     background: var(--color-bg-default);
@@ -268,16 +262,18 @@ ul.icons li img {
     
    
     position: relative;
+    max-width: 100%;
     & div{
         background-image: url(../img/table.jpg);
         background-repeat: no-repeat;
         height: 100%;
+        width: 100%;
         & h2 {
             color:white
             
         }
         & button{
-            /* position: absolute; */
+            position: absolute;
             bottom : 2rem;
             margin-left: 70%;
         }
@@ -413,5 +409,10 @@ ul.icons li img {
     }
     & iframe{
         width: 10rem;
+    }
+}
+@media  (max-width:1750px){
+    #navbar2{
+        
     }
 }
