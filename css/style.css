@@ -144,8 +144,8 @@ ul {
     margin: auto;
     padding-top: 1rem;
     & li{
-        /* padding: 0 5rem; */
-        /* margin: auto; */
+        padding: 0 10rem;
+        margin: auto;
     }
 }
 /* ul .icons {
