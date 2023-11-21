@@ -143,9 +143,10 @@ ul {
     align-items: center;
     margin: auto;
     padding-top: 1rem;
-    /* & li{
-        /* padding: 0 5rem; */
-        /* margin: auto; */
+    & li{
+        padding: 0 10rem;
+        margin: auto;
+    }
 }
 /* ul .icons {
     list-style: none;
