@@ -43,6 +43,7 @@ img{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
     padding-top: 1rem;
     padding-bottom: 1rem;
     .active { 
@@ -132,26 +133,41 @@ footer {
     background: var(--color-bg-default);
     display: flex;
     justify-content: center;
-    height: 200px; 
+    height: 20vh; 
+
 }
-ul.icons {
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding-top: 1rem;
+    & li{
+        /* padding: 0 5rem; */
+        /* margin: auto; */
+    }
+}
+/* ul .icons {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex; 
+    justify-content: s;
     align-items: center;
     margin-top: 70px;
 }       
 ul.icons li {
     margin: 0;
     padding: 0;
-    margin-right: 300px;
-    margin-left: 150px; 
+    /* margin-right: 300px;  */
+    /* margin-left: 150px;  */
+    /* margin-right: 30%; */
   
-  }
+  /* }
 ul.icons li img {
-    max-width: 80px;
-}  
+    width:30vw ;
+}   */ */
 
 
 .mapImg{
@@ -184,7 +200,7 @@ ul.icons li img {
           }
           
         &  .Search {
-            width: 70% ;
+            width: 80% ;
             height: 3.5rem;
             margin-bottom:  0;
             border-radius: 1rem;
@@ -402,17 +418,58 @@ ul.icons li img {
     & h2{
         font-size: 2rem;
         color: var(--color-main);
-        padding-bottom: 1rem;
+        padding-left: 5rem;
+        padding-top: 2rem;
     }
     & ul {
         font-size: 1.5rem;
+        display: block;
     }
     & iframe{
-        width: 10rem;
+        justify-content: center;
+        margin-left: 15%;
+        width: 50vw;
     }
 }
 @media  (max-width:1750px){
-    #navbar2{
-        
+    #section2 , #section3 , #section4{
+        display: block;
     }
+    .grid-container{
+        display: block;
+    }
+}
+@media (max-width:1000px){
+    #article1{
+        display: block;
+    }
+    .img-container{
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        text-align: center;
+        margin-left: -45%;
+    }
+    #navbar2{
+        position: relative;        
+        & .hide {
+            display: none;
+            position: absolute;
+        }
+        & .active:hover {
+            & .hide { 
+                display: block;
+            }
+        }
+    }
+}
+.place {
+    & ul {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 3rem;
+    }
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
 }
