@@ -463,10 +463,33 @@ ul.icons li img {
     }
 }
 .place {
+    margin-bottom: 5rem;
     & ul {
         display: grid;
         grid-template-columns: auto auto auto;
         gap: 3rem;
+        & li {
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 1rem;
+            text-align: left;
+            font-size: var(--text-button);
+            & .shine{
+                padding-left: 1rem;
+                height: 10rem;
+                width: 10rem;
+            }
+            /* & img {
+                align-items: center;
+                padding-left: 10%;
+                width: 20rem;
+            } */
+        }
+        & li:hover{
+            background: rgba(176, 176, 176 , 0.4);
+            color: rgb(120, 27, 163);
+            
+        }
     }
 }
 .icons{

@@ -96,17 +96,18 @@ font-family: 'Times New Roman', Times, serif;
 font-size: 18px;
 width: 150px;
 }
-.grid-container{
+.grid-container1{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin: auto;
   padding: 1%;
 }
 .shine-container, .news-container{
   display: inline-block;
 }
 .shine-container ul, .news-container ul{
-  margin: 30px;
+  margin: 2rem;
   padding: 0;
   list-style: none;
 }
@@ -116,8 +117,8 @@ li{
   vertical-align: top;
 }
 .shine{
-  width: 10rem; 
-  height: 10rem;
+  width: 12rem; 
+  height: 12rem;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 30px; 
