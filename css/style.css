@@ -43,6 +43,8 @@ img{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     .active { 
         border: 0.2rem solid white;
         background: var(--color-main);
@@ -397,4 +399,19 @@ ul.icons li img {
 }
 .hitter {
     width: 10rem;
+}
+#section-1{
+    border: 1px solid black;
+    padding:0 2rem;
+    & h2{
+        font-size: 2rem;
+        color: var(--color-main);
+        padding-bottom: 1rem;
+    }
+    & ul {
+        font-size: 1.5rem;
+    }
+    & iframe{
+        width: 10rem;
+    }
 }
