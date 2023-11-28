@@ -114,30 +114,42 @@
   .container {
     position: relative;
     display: inline-block;
-    width: 600px;
-    height: 800px;
-    margin: 10px auto;
+    width: 30%;
+    height: 50rem;
+    margin: auto;
     border: 1px solid black;
-    padding: 20px;
+    /* padding: 1rem; */
     text-align: center;
     background-color: rgba(221, 218, 218 , 0.8);
-    margin-left: 160px;
-    top: 100px;
+    /* margin-left: 160px; */
+    top: 6rem;
     border-bottom: 1px dotted #000;
 
   }
 
 .container .p1 {
     font-family: 'Mulish', 'sana serif';
-    font-size: 30px; 
+    font-size: 2rem; 
     color: rgb(4, 97, 4);
+  
 }
+.date{
+  display: grid;
+  gap: 2rem;
+}
+.burtgel{
+  & li {
+    height: 10rem;
+  }
+}
+
 .h {
   font-family: 'Mulish', 'sana serif';
   font-size: 25px;
   margin-top:10px;
   margin-bottom: 10px;
   border-bottom: 1px dotted #000;
+  width: 100%;
 }
 
 .link {
@@ -150,7 +162,7 @@
   height: 100px; 
   background-size: cover;
   position: center;
-  margin-left: 230px;
+  padding-top: 3rem;
 }
 ul {
   list-style: none;
@@ -166,10 +178,10 @@ li {
 }
 .button {
     background-color: rgb(10, 116, 10);
-    font-size: 25px;
-    width: 200px; 
-    height: 50px; 
-    padding: 10px 20px; 
+    font-size: 1.4rem;
+    width: 12.rem; 
+    height: 3rem; 
+    padding: 0.7rem 1.4rem; 
     color: white; 
     margin: 0;
 
@@ -243,6 +255,7 @@ li {
 .burtgel{
   & li{
     padding-top: 2rem;
+    padding: auto;
   }
 }
 .date{
@@ -251,4 +264,35 @@ li {
 .subtitle{
   font-size: 1.2rem;
   padding: 1.1rem;
+}
+@media (max-width:1680px){
+  .burtgel{
+    & li{
+      padding-top: 6rem;
+    }
+  }
+}
+@media (max-width:1400px){
+  .h{
+    padding-left: 40%;
+  }
+  .burtgel{
+    & .button{
+      align-items: center;
+      margin-left: -3rem;
+    }
+  }
+}
+@media (max-width:1000px){
+  .h{
+    align-items: center;
+    padding-left: 30%;
+  }  
+  .burtgel{
+    & .button{
+      align-items: center;
+      margin-left: -6rem;
+      padding-left: 20%;
+    }
+  }
 }
