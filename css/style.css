@@ -151,7 +151,7 @@ ul {
     padding-top: 1rem;
 
     & li {
-        padding: 0 10rem;
+        /* padding: 0 10rem; */
         margin: auto;
     }
 }
@@ -495,24 +495,26 @@ ul.icons li img {
 @media (max-width:1750px) {
 
 
-    .onch-ugs{
+    .onch-ugs {
         width: 20%;
         height: 20%;
         align-items: center;
         /* margin-left: 30%; */
         margin-top: 4rem;
         margin: 4rem auto;
+
         & p {
             padding-left: 3rem;
         }
-        
+
     }
 
     #section2,
     #section3,
     #section4 {
         display: block;
-        & .top-club{
+
+        & .top-club {
             padding-left: 10rem;
         }
     }
@@ -523,28 +525,43 @@ ul.icons li img {
 }
 
 @media (max-width:1000px) {
-    #section2 , #section3 ,  #section4{
+    .place {
+        margin-bottom: 5rem;
+
+        & ul {
+            display: block;
+            grid-template-columns: auto auto;
+            gap: 0rem;
+        }
+    }
+
+    #section2,
+    #section3,
+    #section4 {
         & .top-club {
             padding-left: 10rem;
-    
+
             & div {
                 display: grid;
-                grid-template-columns: auto auto ;
+                grid-template-columns: auto auto;
                 gap: 2rem;
             }
         }
-    
+
     }
- 
-    .onch-ugs{
+
+    .onch-ugs {
         margin-left: 20%;
+
         & p {
             padding-left: 5rem;
-        }  
+        }
+
         & button {
             margin-bottom: -10rem;
-        } 
+        }
     }
+
     #navbar1 {
         & .login {
             display: none;
@@ -634,6 +651,7 @@ ul.icons li img {
     display: flex;
     justify-content: space-around;
 }
+
 /* club */
 .sort {
     font-family: 'Times New Roman', Times, serif;
@@ -653,32 +671,147 @@ ul.icons li img {
     padding: 40px;
     margin-top: -70px;
 }
-.p2{
+
+.p2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
     padding: 40px;
-    margin-top: -70px;  
-    color:rgb(8, 85, 8);
+    margin-top: -70px;
+    color: rgb(8, 85, 8);
     font-style: bold;
 }
+
 .grid-container1 {
     display: grid;
     grid-template-columns: 80% 20%;
     padding: 0;
 }
+
 .shine-container ul {
     display: block;
     padding-left: 0;
+
     & li {
         & ul {
-             display: flex;
+            display: flex;
         }
     }
 }
-.new-news , .shine{
+
+.new-news,
+.shine {
     display: block;
-    & .news{
+
+    & .news {
         object-fit: contain;
         width: 10rem;
+    }
+}
+
+.icons1 ul {
+    display: flex;
+
+    & li {
+        margin: auto;
+        margin: 0 7.5rem;
+        padding: 2rem 5rem;
+
+    }
+}
+
+@media (max-width:1750px) {
+    .icons1 ul {
+        & li {
+            margin: auto;
+            margin: 0 3.5rem;
+            padding: 2rem 3.5rem;
+
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .icons1 ul {
+        & li {
+            margin: auto;
+            margin: 0 1.5rem;
+            padding: 2rem 1.5rem;
+
+        }
+    }
+}
+
+@media (max-width:750px) {
+    .icons1 ul {
+        & li {
+            margin: auto;
+            margin: 0 0.5rem;
+            padding: 2rem 0.5rem;
+
+        }
+    }
+}
+
+@media (max-width:563px) {
+    .icon1 ul {
+        & li {
+            margin: 0 !important;
+            padding: 0rem;
+        }
+    }
+
+    .competition-details {
+        & article {
+            display: block;
+        }
+    }
+
+    #navbar1 {
+        & ul {
+            & li {
+                & .Search {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #section2,
+    #section3,
+    #section4 {
+        & .top-club {
+            padding-left: 10rem;
+
+            & div {
+                display: grid;
+                grid-template-columns: auto;
+                gap: 2rem;
+            }
+        }
+
+    }
+
+    .onch-ugs {
+        & img {
+            width: 10vw;
+        }
+
+
+    }
+}
+@media (max-width:1000px){
+    .place {
+        & ul {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+}
+@media (max-width:600px){
+    .place {
+        & ul {
+            display: grid;
+            grid-template-columns: auto;
+        }
     }
 }

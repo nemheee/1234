@@ -180,7 +180,7 @@ li {
 .button {
     background-color: rgb(10, 116, 10);
     font-size: 1.4rem;
-    width: 12.rem; 
+    width: 12rem; 
     height: 3rem; 
     padding: 0.7rem 1.4rem; 
     color: white; 
@@ -295,8 +295,39 @@ li {
   .burtgel{
     & .button{
       align-items: center;
-      margin-left: -6rem;
+      margin-left: 0rem;
       padding-left: 20%;
     }
   }
+}
+@media (max-width:750px){
+  .date{
+    margin-left: 10%;
+  }
+  .h{
+    align-items: center;
+    padding-left: 0%;
+  }  
+  .burtgel{
+    & li{
+      width: 5rem;
+    }
+    & .button{
+      align-items: center;
+      margin-left: -2rem;
+      padding-left: 10%;
+      width: 10rem;
+    }
+  }
+}
+@media (max-width:530px){
+    .burtgel{
+      & li {
+        & .button{
+          font-size: 1rem;
+          margin-left: -1rem;
+        }
+      }
+    }
+
 }
