@@ -35,11 +35,11 @@ img{
     width: 100px;
 }
 
-#navbar2{
+#toggle{
     background-color: var(--color-bg-default);
 }
 
-#navbar2  {
+#toggle  {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -213,7 +213,7 @@ ul.icons li img {
    
 }
 }
-#navbar2 ul {
+#toggle ul {
     margin: 0rem;
     padding: 0rem;
 }
@@ -222,7 +222,7 @@ ul.icons li img {
     margin-right: 2rem;
 }
 .billiardImg{
-    width: 90% !important;
+    width: 15rem !important;
 }
 
 #article1{
@@ -280,8 +280,8 @@ ul.icons li img {
     position: relative;
     max-width: 100%;
     & div{
-        background-image: url(../img/table.jpg);
-        background-repeat: no-repeat;
+        background-image: url(../img/table1.jpg);
+        /* background-repeat: no-repeat; */
         height: 100%;
         width: 100%;
         & h2 {
@@ -431,6 +431,9 @@ ul.icons li img {
         width: 50vw;
     }
 }
+#hamburger {
+    display: none;
+}
 @media  (max-width:1750px){
     #section2 , #section3 , #section4{
         display: block;
@@ -440,6 +443,12 @@ ul.icons li img {
     }
 }
 @media (max-width:1000px){
+    #navbar1{
+       & .login{
+        display: none;
+       }
+    }
+
     #article1{
         display: block;
     }
@@ -449,18 +458,33 @@ ul.icons li img {
         text-align: center;
         margin-left: -45%;
     }
-    #navbar2{
-        position: relative;        
-        & .hide {
+   
+    
+    #toggle{
+        & .active{
+            position: relative;
+            right: 30%;
+            width: 40%;
+            margin-left: 100px;
+        }
+        & .hide{
             display: none;
+        }
+        #hamburger {
+            display: block;
+            cursor: pointer;
             position: absolute;
+            right: 10%;
         }
-        & .active:hover {
-            & .hide { 
-                display: block;
-            }
+        .active1 {
+            display: flex !important;
         }
-    }
+    
+    
+}
+}
+.active1 {
+    display: flex !important;
 }
 .place {
     margin-bottom: 5rem;

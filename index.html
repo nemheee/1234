@@ -28,26 +28,29 @@
                     <a href="./index.html"><img class="billiardImg" src="./img/logo.png" alt=""></a>
                 </li>
                 <li class="second-list">
-                    <input class="Search" type="text" aria-label="Search" placeholder="Хайх">
+                    <input class="Search" type="text" aria-label="Search" placeholder=" Хайх">
                     <label for=""><i class="fa-solid fa-magnifying-glass"></i></label>
                 </li>
                 <li>
                     <div class="nav-flex">
                         <a class="humanicon" href="./html/login.html"><img src="./img/5358.webp" alt="Login"></a>
                         <a class="login" href="./html/login.html">Нэвтрэх</a>
-                        <a href="./html/tools.html"><img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="Tools"></a>
+                        <a class="login" href="./html/tools.html"><img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="Tools"></a>
                     </div>
                 </li>
             </ul>
 
         </nav>
-        <nav id="navbar2">
+        <nav  id="toggle" >
 
             <a class="active" href="./index.html">Нүүр</a>
             <a class="hide" href="./html/club.html">Клуб</a>
             <a class="hide" href="./html/place.html">Газар</a>
             <a class="hide" href="./html/competition.html">Тэмцээн</a>
             <a class="hide" href="./html/rule.html">Дүрэм</a>
+            <ol id="hamburger" >
+                <i   class="fa-solid fa-bars" style="color: white;"></i>
+            </ol>
 
         </nav>
     </header>
@@ -86,7 +89,7 @@
         <article id="article2">
             <div>
                 <h2>Ширээ захиалах</h2>
-                <img  src="./img/table.jpg" alt="">
+                <!-- <img  src="./img/table.jpg" alt=""> -->
                 <div class="table">
                     <img style="background-color: #1E4620" src="./img/shiree-removebg-preview.png" alt="">
                     <img style="background-color: #1E4620" src="./img/shiree-removebg-preview.png" alt="">
@@ -239,7 +242,14 @@
             </ul>
         </address>
     </footer>
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const toggless = document.getElementById("toggle");
 
+hamburger.addEventListener("click", function(){
+    toggless.classList.toggle("active1");    
+})
+</script>
 </body>
 
 </html>
