@@ -18,15 +18,15 @@ a{
 img{
   width: 100px;
 }
-#navbar2{
+#toggle{
   background: rgb(31, 95, 31);
   padding: 1rem;
 }
-#navbar2 ul{
+#toggle ul{
   padding-left: 200px;
   padding-right: 200px;
 }
-#navbar2 ul li {
+#toggle ul li {
   display: inline;
   justify-content: space-between;   
   margin: 1rem;
@@ -97,14 +97,17 @@ font-size: 18px;
 width: 150px;
 }
 .grid-container1{
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: 60% 40%;
   justify-content: space-between;
   align-items: flex-start;
   margin: auto;
   padding: 1%;
 }
-.shine-container, .news-container{
-  display: inline-block;
+.shine-container, .new-news{
+  display: grid;
+  /* position: absolute; */
 }
 .shine-container ul, .news-container ul{
   margin: 2rem;
