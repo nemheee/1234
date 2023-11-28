@@ -10,6 +10,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/main.js"></script>
     <title>Rule</title>
 </head>
 <body>
@@ -37,13 +38,16 @@
             </ul>
 
         </nav>
-        <nav id="navbar2">
+        <nav id="toggle">
 
-            <a  href="../index.html">Нүүр</a>
-            <a  href="./club.html">Клуб</a>
-            <a href="./place.html">Газар</a>
-            <a href="./competition.html">Тэмцээн</a>
+            <a class="hide" href="../index.html">Нүүр</a>
+            <a class="hide" href="./club.html">Клуб</a>
+            <a class="hide" href="./place.html">Газар</a>
+            <a class="hide" href="./competition.html">Тэмцээн</a>
             <a class="active" href="./rule.html">Дүрэм</a>
+            <ol id="hamburger" >
+                <i   class="fa-solid fa-bars" style="color: white;"></i>
+            </ol>
 
         </nav>
     </header>
