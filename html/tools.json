@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Ширээ",
+        "price": 500000,
+        "category": "table"         
+    },
+    {
+        "name": "Цохиур",
+        "price": 50000,
+        "category": "racket"         
+
+    },
+    {
+        "name": "Бээлий",
+        "price": 80000,
+        "category": "glove"         
+ 
+    }, 
+    {
+        "name": "Шаариг",
+        "price": 20000,
+        "category": "ball"         
+
+    }, 
+    {
+        "name": "Шүүгээ",
+        "price": 200000,
+        "category": "closet"         
+ 
+    },
+    {
+        "name": "Дагалдах хэрэгслийн иж бүрдэл",
+        "price": 300000,
+        "category": "accessories"         
+ 
+    },
+    {
+        "name": "Тавиур ба гурвалжин",
+        "price": 40000,
+        "category": "accessories"        
+  
+    }, 
+    {
+        "name": "Гүйцэтгэлийн босоо ам",
+        "price": 500000,
+        "category": "accessories"         
+
+    }
+]

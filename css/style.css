@@ -393,7 +393,7 @@ ul.icons li img {
         width: 30%;
         height: 30%;
         position: relative;
-        padding-left: 4rem;
+        padding-left: 0rem;
 
         & button {
             position: absolute;
@@ -693,9 +693,45 @@ ul.icons li img {
 
     & li {
         & ul {
-            display: flex;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            & img{
+                object-fit: contain;
+                width: 10rem;
+                height: 10rem;
+            }
+
         }
     }
+}
+@media (max-width:1050px){
+    .new-news{
+        & .news {
+            width: 10rem;
+            height: 1rem;
+        }
+    }
+    .shine-container ul {
+        padding-bottom: 1rem;
+        & li {
+            & ul {
+                display: grid;
+                grid-template-columns: auto auto  ;
+                gap: 1rem;
+                margin-right: 10rem;
+                & img{
+                    object-fit: contain;
+                    width: 5rem;
+                    height: 5rem;
+                }
+              
+            }
+        }
+    }
+}
+
+.shine{
+    background: black;
 }
 
 .new-news,
@@ -703,8 +739,8 @@ ul.icons li img {
     display: block;
 
     & .news {
-        object-fit: contain;
-        width: 10rem;
+        width: 20rem;
+        height: 10rem;
     }
 }
 
@@ -799,7 +835,8 @@ ul.icons li img {
 
     }
 }
-@media (max-width:1000px){
+
+@media (max-width:1000px) {
     .place {
         & ul {
             display: grid;
@@ -807,11 +844,41 @@ ul.icons li img {
         }
     }
 }
-@media (max-width:600px){
+
+@media (max-width:600px) {
     .place {
         & ul {
             display: grid;
             grid-template-columns: auto;
         }
+    }
+}
+@media (max-width:1050px){
+    .new-news{
+        margin-left: -5rem;
+        & .news {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+}
+@media (max-width:450px){
+    .grid-container1{
+        display: block;
+    
+    }
+    .shine-container ul {
+        padding-bottom: 1rem;
+        & li {
+            & ul {
+                display: grid;
+                grid-template-columns: auto auto  ;
+                gap: 1rem;
+                margin-right: 0rem;
+            }
+        }
+    }
+    .new-news{
+        margin-left: 30%;
     }
 }

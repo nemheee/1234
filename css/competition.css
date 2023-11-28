@@ -177,6 +177,16 @@ li {
   /*border-bottom: 1px dotted #000; */
 
 }
+.button1 {
+  background-color: rgb(46, 47, 46);
+  font-size: 1.4rem;
+  width: 12rem; 
+  height: 3rem; 
+  padding: 0.7rem 1.4rem; 
+  color: white; 
+  margin: 0;
+
+}
 .button {
     background-color: rgb(10, 116, 10);
     font-size: 1.4rem;
@@ -288,6 +298,14 @@ li {
   }
 }
 @media (max-width:1000px){
+  .button1 {
+    background-color: rgb(46, 47, 46);
+    font-size: 0.7rem;
+    padding: 0.7rem 1.4rem; 
+    color: white; 
+    margin: 0;
+    
+}   
   .h{
     align-items: center;
     padding-left: 30%;
@@ -301,6 +319,13 @@ li {
   }
 }
 @media (max-width:750px){
+  .button1 {
+    background-color: rgb(46, 47, 46);
+    padding: 0.7rem 1.4rem; 
+    color: white; 
+    margin: 0;
+    
+}   
   .date{
     margin-left: 10%;
   }
@@ -330,4 +355,8 @@ li {
       }
     }
 
+}
+.fff {
+  color : blue;
+  position: relative;
 }
