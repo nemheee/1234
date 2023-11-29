@@ -304,6 +304,7 @@ ul.icons li img {
 
     & div {
         background-image: url(../img/table1.jpg);
+        border-radius: 0.5rem;
         /* background-repeat: no-repeat; */
         height: 100%;
         width: 100%;
@@ -419,6 +420,7 @@ ul.icons li img {
             position: relative;
             text-align: center;
             align-items: center;
+            border-radius: 1rem;
         }
     }
 }
@@ -463,6 +465,7 @@ ul.icons li img {
 
 .hitter {
     width: 10rem;
+    border-radius: 10px;
 }
 
 #section-1 {
@@ -551,6 +554,7 @@ ul.icons li img {
     }
 
     .onch-ugs {
+      
         margin-left: 20%;
 
         & p {
@@ -560,6 +564,7 @@ ul.icons li img {
         & button {
             margin-bottom: -10rem;
         }
+       
     }
 
     #navbar1 {
@@ -751,6 +756,9 @@ ul.icons li img {
         margin: auto;
         margin: 0 7.5rem;
         padding: 2rem 5rem;
+        & img{
+            border-radius: 1.3rem;
+        }
 
     }
 }
