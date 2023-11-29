@@ -73,6 +73,7 @@ export default class Tool {
             });
 
             billiardsLink.addEventListener('click', async () => {
+                console.log("workinnggg");
                 await this.fetchAndRenderTools('tools-container', 'table', billiardContainer);
             });
 

@@ -890,3 +890,14 @@ ul.icons li img {
         margin-left: 30%;
     }
 }
+.rule{
+    & ul{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        & li{
+            /* width: 30%; */
+            margin: 2rem;
+
+        }
+    }
+}
