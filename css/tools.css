@@ -113,6 +113,8 @@ img {
   margin-top: 30px;
   max-height: 90%;
   overflow-y: auto;
+  margin-top: -30%;
+
 }
 
 .overlay a {
@@ -124,9 +126,12 @@ img {
   transition: 0.3s;
 }
 
+
 .overlay a:hover,
 .overlay a:focus {
-  color: #818181;
+  color: black;
+  background: white;
+  border: 2px rgb(3, 61, 3) solid;
 }
 
 .overlay .close-btn {
@@ -147,6 +152,7 @@ img {
   background-color: transparent;
   border: none;
   color: #818181;
+
 }
 
 .open-btn:hover {
