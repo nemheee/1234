@@ -1,15 +1,16 @@
 export default class Tool {
-    constructor(name, price, category , sub) {
+    constructor(name, price, category, sub) {
         this.name = name;
         this.price = price;
         this.category = category;
         this.sub = sub;
     }
 
-    render() {
+    render(billiardContainer) {
+        billiardContainer.innerHTML = '';
         const toolElement = document.createElement('article');
         toolElement.innerHTML = `
-        <a><img src="../img/123.png" alt="Monjoy Club Logo">
+        <a><img src="../img/${this.sub}.png" alt="${this.sub}">
           <p>${this.name}</p>
           <p class="p">${this.sub}</p>
           <p>${this.price}₮</p>
@@ -18,7 +19,7 @@ export default class Tool {
         return toolElement;
     }
 
-    static async fetchAndRenderTools(target, category) {
+    static async fetchAndRenderTools(target, category, billiardContainer) {
         try {
             const response = await fetch('tools.json');
 
@@ -29,13 +30,13 @@ export default class Tool {
             const tools = await response.json();
             const filteredTools = category ? tools.filter(tool => tool.category === category) : tools;
 
-            this.renderTools(filteredTools, target);
+            this.renderTools(filteredTools, target, billiardContainer);
         } catch (error) {
             console.error('Error fetching or rendering tools:', error);
         }
     }
 
-    static renderTools(tools, target) {
+    static renderTools(tools, target, billiardContainer) {
         const toolsContainer = document.getElementById(target);
         if (!toolsContainer) {
             console.error(`Error: tools container with ID '${target}' not found in the DOM`);
@@ -46,8 +47,8 @@ export default class Tool {
         toolsContainer.innerHTML = '';
 
         const toolsElements = tools.map(toolData => {
-            const toolObj = new Tool(toolData.name, toolData.price, toolData.category , toolData.sub);
-            return toolObj.render();
+            const toolObj = new Tool(toolData.name, toolData.price, toolData.category, toolData.sub);
+            return toolObj.render(billiardContainer);
         });
 
         toolsElements.forEach(toolElement => {
@@ -62,32 +63,39 @@ export default class Tool {
         const ballsLink = document.getElementById('ball-link');
         const closetsLink = document.getElementById('closet-link');
         const accessoriesLink = document.getElementById('accessories-link');
+        const billiardContainer = document.getElementById('billiard-container');
+        const allContainer = document.getElementById('all');
 
-        if (billiardsLink && racketsLink && glovesLink && ballsLink && closetsLink && accessoriesLink) {
+        if (allContainer && billiardsLink && racketsLink && glovesLink && ballsLink && closetsLink && accessoriesLink && billiardContainer) {
+
+            allContainer.addEventListener('click', async () => {
+                await this.fetchAndRenderTools('tools-container', '', billiardContainer);
+            });
+
             billiardsLink.addEventListener('click', async () => {
-                await this.fetchAndRenderTools('tools-container', 'table');
+                await this.fetchAndRenderTools('tools-container', 'table', billiardContainer);
             });
 
             racketsLink.addEventListener('click', async () => {
-                await this.fetchAndRenderTools('tools-container', 'racket');
+                await this.fetchAndRenderTools('tools-container', 'racket', billiardContainer);
             });
-            glovesLink.addEventListener('click', async() =>{
-                await this.fetchAndRenderTools('tools-container' , 'glove')
+            glovesLink.addEventListener('click', async () => {
+                await this.fetchAndRenderTools('tools-container', 'glove', billiardContainer)
             });
-            ballsLink.addEventListener('click', async() =>{
-                await this.fetchAndRenderTools('tools-container' , 'ball')
+            ballsLink.addEventListener('click', async () => {
+                await this.fetchAndRenderTools('tools-container', 'ball', billiardContainer)
             });
-            closetsLink.addEventListener('click', async() =>{
-                await this.fetchAndRenderTools('tools-container' , 'closet')
+            closetsLink.addEventListener('click', async () => {
+                await this.fetchAndRenderTools('tools-container', 'closet', billiardContainer)
             });
-            accessoriesLink.addEventListener('click', async() =>{
-                await this.fetchAndRenderTools('tools-container' , 'accessories')
+            accessoriesLink.addEventListener('click', async () => {
+                await this.fetchAndRenderTools('tools-container', 'accessories', billiardContainer)
             });
         } else {
-            console.error('Error: Billiards or Hitters link not found in the DOM');
+            console.error('Error: Billiards or Hitters link not found in the DOM', billiardContainer);
         }
     }
-    
+
 }
 Tool.addEventListeners();
 // Call the addEventListeners method to set up the click event listener

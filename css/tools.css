@@ -264,7 +264,7 @@ ul.icons li img {
   transform: scaleX(1);
 }
 #tools-container{
-  display: flex;
+  display: block;
   margin-bottom: 1rem;
   & article {
     border: 1px solid black;
