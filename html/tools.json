@@ -1,48 +1,64 @@
 [
     {
-        "name": "Ширээ",
-        "price": 500000,
+        "name": "Билльярдын ширээ",
+        "price":"500,000",
+        "sub" : "Action",
         "category": "table"         
     },
     {
         "name": "Цохиур",
-        "price": 50000,
+        "price": "700,000",
+        "sub" : "Araminth",
         "category": "racket"         
 
     },
     {
         "name": "Бээлий",
-        "price": 80000,
+        "price": "90,000",
+        "sub" : "Predator",
         "category": "glove"         
  
     }, 
     {
-        "name": "Шаариг",
-        "price": 20000,
-        "category": "ball"         
+        "name": "Билльярдын ширээ",
+        "price": "12,000,000",
+        "sub" : "Spencer",
+        "category": "table"         
 
     }, 
     {
+        "name": "Шаариг",
+        "price": "650,000",
+        "sub" : "Eight Ball mafia",
+        "category": "ball"         
+ 
+    },
+    {
         "name": "Шүүгээ",
-        "price": 200000,
+        "price": "3,150,000",
+        "sub" : "Lucasi",
         "category": "closet"         
  
     },
     {
-        "name": "Дагалдах хэрэгслийн иж бүрдэл",
-        "price": 300000,
-        "category": "accessories"         
- 
-    },
-    {
-        "name": "Тавиур ба гурвалжин",
-        "price": 40000,
+        "name": "Шаариг хайрцагтай",
+        "price": "1,150,000",
+        "sub" : "Lucasi",
         "category": "accessories"        
   
     }, 
     {
-        "name": "Гүйцэтгэлийн босоо ам",
-        "price": 500000,
+        "name": "Lucasi LUX63 <br> September 20223",
+        "price": "2,150,000",
+        "sub": "Lucasi",
+        "category": "accessories"         
+
+    }
+    , 
+    {
+        "name": "Lucasi LUX63 <br> September 20223",
+        "price": "3,150,000",
+        "sub": "Lucasi",
         "category": "accessories"         
 
     }

@@ -263,3 +263,15 @@ ul.icons li img {
   margin: 90;
   transform: scaleX(1);
 }
+#tools-container{
+  display: flex;
+  margin-bottom: 1rem;
+  & article {
+    border: 1px solid black;
+    width: 100%;
+    & a{
+      text-decoration: none;
+    }
+    
+  }
+}
