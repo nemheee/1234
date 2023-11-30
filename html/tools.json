@@ -1,64 +1,73 @@
 [
     {
         "name": "Билльярдын ширээ",
-        "price":"500,000",
-        "sub" : "Action",
+        "price":500000,
+        "sub" : "Action",   
+        "image":"Action.png",
         "category": "table"         
     },
     {
         "name": "Цохиур",
-        "price": "700,000",
+        "price": 700000,
         "sub" : "Araminth",
+        "image":"Araminth.png",
         "category": "racket"         
 
     },
     {
         "name": "Бээлий",
-        "price": "90,000",
+        "price": 90000,
         "sub" : "Predator",
+        "image":"Predator.png",
         "category": "glove"         
  
     }, 
     {
         "name": "Билльярдын ширээ",
-        "price": "12,000,000",
+        "price": 12000000,
         "sub" : "Spencer",
+        "image":"Spencer.png",
         "category": "table"         
 
     }, 
     {
         "name": "Шаариг",
-        "price": "650,000",
+        "price": 650000,
         "sub" : "Eight Ball mafia",
+        "image":"Eight.png",
         "category": "ball"         
  
     },
     {
         "name": "Шүүгээ",
-        "price": "3,150,000",
+        "price": 3150000,
         "sub" : "Closet",
+        "image":"Closet.png",
         "category": "closet"         
  
     },
     {
         "name": "Шаариг хайрцагтай",
-        "price": "1,150,000",
+        "price": 1150000,
         "sub" : "Lucasi",
+        "image":"Lucasi.png",
         "category": "accessories"        
   
     }, 
     {
         "name": "Lucasi LUX63 <br> September 20223",
-        "price": "2,150,000",
+        "price": 2150000,
         "sub": "Lucasi",
+        "image":"Lucasi.png",
         "category": "accessories"         
 
     }
     , 
     {
         "name": "Lucasi LUX63 <br> September 20224",
-        "price": "3,150,000",
+        "price": 3150000,
         "sub": "Lucasi",
+        "image":"Lucasi.png",
         "category": "accessories"         
 
     }
