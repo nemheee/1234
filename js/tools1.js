@@ -1,5 +1,5 @@
 export default class Tool {
-    constructor(name, price, category , sub) {
+    constructor(name, price, category, sub) {
         this.name = name;
         this.price = price;
         this.category = category;
@@ -7,10 +7,10 @@ export default class Tool {
     }
 
     render(billiardContainer) {
-        billiardContainer.innerHTML='';
+        billiardContainer.innerHTML = '';
         const toolElement = document.createElement('article');
         toolElement.innerHTML = `
-        <a><img src="../img/123.png" alt="Monjoy Club Logo">
+        <a><img src="../img/${this.sub}.png" alt="${this.sub}">
           <p>${this.name}</p>
           <p class="p">${this.sub}</p>
           <p>${this.price}₮</p>
@@ -19,22 +19,40 @@ export default class Tool {
         return toolElement;
     }
 
-    static async fetchAndRenderTools(target, category , billiardContainer) {
+    static async fetchAndRenderTools(target, category, billiardContainer) {
         try {
-            const response = await fetch('tools.json');
-
+            const queryParams = new URLSearchParams();
+            if (category) {
+                queryParams.append('category', category);
+            }
+    
+            const response = await fetch(`tools.json?${queryParams.toString()}`);
+    
             if (!response.ok) {
                 throw new Error(`Failed to fetch tools. Status: ${response.status}`);
             }
-
+    
             const tools = await response.json();
+    
+            // Filter tools based on category
             const filteredTools = category ? tools.filter(tool => tool.category === category) : tools;
-
-            this.renderTools(filteredTools, target ,billiardContainer);
+    
+            this.renderTools(filteredTools, target, billiardContainer);
+    
+            // Update URL with filtered category
+            const searchParams = new URLSearchParams(window.location.search);
+            if (category) {
+                searchParams.set('category', category);
+            } else {
+                searchParams.delete('category');
+            }
+    
+            window.history.replaceState({}, '', `${window.location.pathname}?${searchParams.toString()}`);
         } catch (error) {
             console.error('Error fetching or rendering tools:', error);
         }
     }
+    
 
     static renderTools(tools, target, billiardContainer) {
         const toolsContainer = document.getElementById(target);
@@ -47,7 +65,7 @@ export default class Tool {
         toolsContainer.innerHTML = '';
 
         const toolsElements = tools.map(toolData => {
-            const toolObj = new Tool(toolData.name, toolData.price, toolData.category , toolData.sub);
+            const toolObj = new Tool(toolData.name, toolData.price, toolData.category, toolData.sub);
             return toolObj.render(billiardContainer);
         });
 
@@ -63,34 +81,39 @@ export default class Tool {
         const ballsLink = document.getElementById('ball-link');
         const closetsLink = document.getElementById('closet-link');
         const accessoriesLink = document.getElementById('accessories-link');
-        const billiardContainer = document.getElementById("billiard-container");
-        const allContainer = document.getElementById("all");
-        if ( allContainer && billiardsLink && racketsLink && glovesLink && ballsLink && closetsLink && accessoriesLink &&billiardContainer) {
-            
+        const billiardContainer = document.getElementById('billiard-container');
+        const allContainer = document.getElementById('all');
+
+        if (allContainer && billiardsLink && racketsLink && glovesLink && ballsLink && closetsLink && accessoriesLink && billiardContainer) {
+
+            allContainer.addEventListener('click', async () => {
+                await this.fetchAndRenderTools('tools-container', '', billiardContainer);
+            });
+
             billiardsLink.addEventListener('click', async () => {
                 await this.fetchAndRenderTools('tools-container', 'table', billiardContainer);
             });
 
             racketsLink.addEventListener('click', async () => {
-                await this.fetchAndRenderTools('tools-container', 'racket',billiardContainer);
+                await this.fetchAndRenderTools('tools-container', 'racket', billiardContainer);
             });
-            glovesLink.addEventListener('click', async() =>{
-                await this.fetchAndRenderTools('tools-container' , 'glove',billiardContainer)
+            glovesLink.addEventListener('click', async () => {
+                await this.fetchAndRenderTools('tools-container', 'glove', billiardContainer)
             });
-            ballsLink.addEventListener('click', async() =>{
-                await this.fetchAndRenderTools('tools-container' , 'ball',billiardContainer)
+            ballsLink.addEventListener('click', async () => {
+                await this.fetchAndRenderTools('tools-container', 'ball', billiardContainer)
             });
-            closetsLink.addEventListener('click', async() =>{
-                await this.fetchAndRenderTools('tools-container' , 'closet',billiardContainer)
+            closetsLink.addEventListener('click', async () => {
+                await this.fetchAndRenderTools('tools-container', 'closet', billiardContainer)
             });
-            accessoriesLink.addEventListener('click', async() =>{
-                await this.fetchAndRenderTools('tools-container' , 'accessories',billiardContainer)
+            accessoriesLink.addEventListener('click', async () => {
+                await this.fetchAndRenderTools('tools-container', 'accessories', billiardContainer)
             });
         } else {
-            console.error('Error: Billiards or Hitters link not found in the DOM',billiardContainer);
+            console.error('Error: Billiards or Hitters link not found in the DOM', billiardContainer);
         }
     }
-    
+
 }
 Tool.addEventListeners();
 // Call the addEventListeners method to set up the click event listener

@@ -21,20 +21,38 @@ export default class Tool {
 
     static async fetchAndRenderTools(target, category, billiardContainer) {
         try {
-            const response = await fetch('tools.json');
-
+            const queryParams = new URLSearchParams();
+            if (category) {
+                queryParams.append('category', category);
+            }
+    
+            const response = await fetch(`tools.json?${queryParams.toString()}`);
+    
             if (!response.ok) {
                 throw new Error(`Failed to fetch tools. Status: ${response.status}`);
             }
-
+    
             const tools = await response.json();
+    
+            // Filter tools based on category
             const filteredTools = category ? tools.filter(tool => tool.category === category) : tools;
-
+    
             this.renderTools(filteredTools, target, billiardContainer);
+    
+            // Update URL with filtered category
+            const searchParams = new URLSearchParams(window.location.search);
+            if (category) {
+                searchParams.set('category', category);
+            } else {
+                searchParams.delete('category');
+            }
+    
+            window.history.replaceState({}, '', `${window.location.pathname}?${searchParams.toString()}`);
         } catch (error) {
             console.error('Error fetching or rendering tools:', error);
         }
     }
+    
 
     static renderTools(tools, target, billiardContainer) {
         const toolsContainer = document.getElementById(target);
@@ -73,7 +91,6 @@ export default class Tool {
             });
 
             billiardsLink.addEventListener('click', async () => {
-                console.log("workinnggg");
                 await this.fetchAndRenderTools('tools-container', 'table', billiardContainer);
             });
 
