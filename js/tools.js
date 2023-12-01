@@ -18,9 +18,11 @@ export default class Tool {
         `;
         return toolElement;
     }
-
     static async fetchAndRenderTools(target, category, billiardContainer) {
         try {
+            // Set category to an empty string if it's falsy
+            category = category || '';
+    
             const queryParams = new URLSearchParams();
             if (category) {
                 queryParams.append('category', category);
@@ -52,6 +54,7 @@ export default class Tool {
             console.error('Error fetching or rendering tools:', error);
         }
     }
+    
     
 
     static renderTools(tools, target, billiardContainer) {
