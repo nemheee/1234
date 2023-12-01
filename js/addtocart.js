@@ -7,24 +7,37 @@ class Tool {
         this.sub = sub;
     }
     
-    static async fetchAndRenderTools(containerId, category, billiardContainer) {
-        try {
-            const toolsData = await this.fetchToolsData();
-            const filteredTools = category
-                ? toolsData.filter(tool => tool.category === category)
-                : toolsData;
-    
-            // Render the tools using the specified container
-            this.render(document.getElementById(containerId), filteredTools);
-    
-            // If a billiard container is specified and it is different from the main container, update it with the rendered tools
-            if (billiardContainer && containerId === 'billiard-container') {
-                this.render(billiardContainer, filteredTools);
-            }
-        } catch (error) {
-            console.error('Error fetching and rendering tools:', error);
+static async fetchAndRenderTools(containerId, category, billiardContainer) {
+    try {
+        const toolsData = await this.fetchToolsData();
+        const filteredTools = category
+            ? toolsData.filter(tool => tool.category === category)
+            : toolsData;
+
+        // Render the tools using the specified container
+        this.render(document.getElementById(containerId), filteredTools);
+
+        // If a billiard container is specified and it is different from the main container, update it with the rendered tools
+        if (billiardContainer && containerId === 'billiard-container') {
+            this.render(billiardContainer, filteredTools);
         }
+
+        // Update URL search parameters
+        const searchParams = new URLSearchParams(window.location.search);
+
+        if (category) {
+            searchParams.set('category', category);
+        } else {
+            searchParams.delete('category');
+        }
+
+        // Update the URL without triggering a page reload
+        window.history.replaceState({}, '', `${window.location.pathname}?${searchParams.toString()}`);
+    } catch (error) {
+        console.error('Error fetching and rendering tools:', error);
     }
+}
+
     
     static render(billiardContainer, tools) {
         billiardContainer.innerHTML = '';
@@ -39,21 +52,37 @@ class Tool {
     }
 
     renderToolElement() {
+        // Create a shadow root
+        const shadowRoot = document.createElement('div').attachShadow({ mode: 'open' });
+    
+        // Create the tool element within the shadow DOM
         const toolElement = document.createElement('div');
         toolElement.className = 'box';
         toolElement.innerHTML = `
+            <link rel="stylesheet" href="addtocart.css">
             <div class='img-box'>
                 <img class='images' src=./image/${this.image} ></img>
             </div>
             <div class='bottom'>
                 <p>${this.name}</p>
-                <p>${this.sub}</p>
+                <p>${this.sub}</p>  
                 <h2>${this.price.toLocaleString(undefined, { maximumFractionDigits: 1, minimumFractionDigits: 1 })}, ₮</h2>
                 <button onclick='addtocart("${this.name}")'>Add to cart</button>
             </div>
         `;
-        return toolElement;
+    
+        // Append the tool element to the shadow root
+        shadowRoot.appendChild(toolElement);
+    
+        // Create a container for the shadow DOM
+        const container = document.createElement('div');
+    
+        // Attach the shadow root to the container
+        container.attachShadow({ mode: 'open' }).appendChild(shadowRoot);
+    
+        return container;
     }
+    
 
     static async fetchToolsData() {
         try {
@@ -158,6 +187,8 @@ function delElement(index) {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
+
+    
     const toolsData = await Tool.fetchToolsData();
     const categories = [...new Set(toolsData.map(item => item))];
     let i = 0;
