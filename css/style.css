@@ -665,9 +665,14 @@ ul.icons li img {
 }
 
 .h2 {
+    display: flex;
     font-family: 'Times New Roman', Times, serif;
     font-size: xx-large;
     padding: 40px;
+    & .p-dark{
+        opacity: 0.8;
+        
+    }
 }
 
 .p {
@@ -751,6 +756,7 @@ ul.icons li img {
 
 .icons1 ul {
     display: flex;
+    
 
     & li {
         margin: auto;
@@ -900,4 +906,8 @@ ul.icons li img {
 
         }
     }
+}
+.rule-1{
+    display: flex;
+    justify-content: space-around;
 }
