@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow DOM Example</title>
+    <style>
+        /* Global styles here */
+        #tools-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            width: 200px;
+        }
+        .img-box img {
+            max-width: 100%;
+            height: auto;
+        }
+        .bottom {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="host-element">Host Element</div>
+
+    <script>
+        const hostElement = document.getElementById('host-element');
+        const shadowRoot = hostElement.attachShadow({ mode: 'open' });
+
+        const template = document.createElement('template');
+        template.innerHTML = `
+            <style>
+                /* Your styles specific to the shadow DOM go here */
+                .box {
+                    background-color: #f8f8f8;
+                }
+            </style>
+            <div id="tools-container">
+                <slot></slot>
+            </div>`;
+
+        shadowRoot.appendChild(template.content.cloneNode(true));
+
+        const categories = [
+            {
+                name: "Билльярдын ширээ",
+                price: 500000,
+                sub: "Action",
+                image: 'Action.png',
+                category: "table"
+            },
+            {
+                name: "Билльярдын ширээ",
+                price: 500000,
+                sub: "Action",
+                image: 'Action.png',
+                category: "table"
+            },
+            // ... (your other data)
+        ];
+
+        let i = 0;
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function saveCartToLocalStorage() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function render(categories) {
+            const slot = shadowRoot.querySelector('slot');
+            slot.innerHTML = categories.map((item) => {
+                const { image, name, sub, price } = item;
+                return `
+                    <div class='box'>
+                        <div class='img-box'>
+                            <img class='images' src=./image/${image} ></img>
+                        </div>
+                        <div class='bottom'>
+                            <p>${name}</p>
+                            <p>${sub}</p>
+                            <h2>${price.toLocaleString(undefined, { maximumFractionDigits: 1, minimumFractionDigits: 1 })}, ₮</h2>
+                            <button onclick='addtocart(${i++})'>Add to cart</button>
+                        </div>
+                    </div>`;
+            }).join('');
+        }
+
+        function addtocart(a) {
+            const existingItem = cart.find(item => item.name === categories[a].name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ ...categories[a], quantity: 1 });
+            }
+
+            document.getElementById("count").innerHTML = cart.length;
+
+            displaycart();
+            saveCartToLocalStorage();
+        }
+        function delElement(a){
+    cart.splice(a, 1);
+    document.getElementById("count").innerHTML = '0'
+    displaycart();
+    saveCartToLocalStorage();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    fetchData();
+    cart = JSON.parse(localStorage.getItem('cart')) || [];
+    document.getElementById("count").innerHTML = cart.length;
+    displaycart();
+});
+
+function displaycart() {
+    let totalQuantity = 0;
+    let total = 0;
+
+    if (cart.length === 0) {
+        document.getElementById('cartItem').innerHTML = "Your cart is empty";
+        document.getElementById("total").innerHTML = "$ " + 0 + ".00";
+    } else {
+        for (const items of cart) {
+            const { price, quantity } = items;
+            total += price * quantity;
+            totalQuantity += quantity;
+        }
+
+        document.getElementById("total").innerHTML =   (total).toLocaleString(undefined, { maximumFractionDigits: 1, minimumFractionDigits: 1 }) + ' ₮';
+        document.getElementById("count").innerHTML = totalQuantity;
+        document.getElementById("cartItem").innerHTML = cart.map((items, index) => {
+            var { category, image, price, quantity, name } = items;
+
+            return (
+                `<div class='cart-item'>
+                <div class='row-img'>
+                    <img class='rowimg' src=./image/${image}>
+                </div>
+                <p style='font-size:12px;'>${name}</p>
+                <div class="nemeh">
+                    <button onclick='decreaseQuantity(${index})'>-</button>
+                    <span>${quantity}</span>
+                    <button onclick='increaseQuantity(${index})'>+</button>
+                </div>
+                <h2 style='font-size: 15px;'> ${(price * quantity).toLocaleString(undefined, { maximumFractionDigits: 1, minimumFractionDigits: 1 })} ₮</h2>` +
+                "<i class='fa-solid fa-trash' onclick='delElement(" + index + ")'></i></div>"
+            );
+        }).join('');
+    }
+}
+
+function increaseQuantity(index) {
+    const item = cart[index];
+    item.quantity += 1;
+    displaycart();
+    saveCartToLocalStorage();
+}
+
+function decreaseQuantity(index) {
+    const item = cart[index];
+    if (item.quantity > 1) {
+        item.quantity -= 1;
+        displaycart();
+        saveCartToLocalStorage();
+    }
+}
+
+        // ... (rest of your code)
+
+        document.addEventListener('DOMContentLoaded', function () {
+            render(categories);
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById("count").innerHTML = cart.length;
+            displaycart();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+        <link rel="stylesheet" href="addtocart.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    </head> -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/tools.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Billiard</title>
+  <link rel="stylesheet" href="addtocart.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+
+  <script src="mysidebar-component.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+
+    <!-- <div id="tools-container"></div> -->
+    <script type="module" src="../js/tools.js"></script>
+
+
+    <nav id="navbar1">
+
+      <ul>
+
+        <li>
+          <a href="../index.html"><img class="billiardImg" src="../img/logo.png" alt=""></a>
+        </li>
+        <li class="second-list">
+          <input class="Search" type="text" aria-label="Search" placeholder="Хайх">
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+        </li>
+        <li>
+          <div class="nav-flex">
+            <a class="humanicon" href="./login.html"><img src="./img/5358.webp" alt="Login"></a>
+            <a class="login" href="./login.html">Нэвтрэх</a>
+            <!-- <a  href="./html/tools.html"><img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="Tools"></a> -->
+            <a class="cart" href="./tools1.html" style="border: 1px solid black; color: grey; padding: 0.6rem;">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <p style="text-align: right;" id="count">0</p>
+           
+             
+            </a>
+          </div>
+        </li>
+      </ul>
+
+    </nav>
+    <nav id="toggle">
+
+      <a class="hide" href="../index.html">Нүүр</a>
+      <a  href="./club.html">Клуб</a>
+      <a class="hide" href="./place.html">Газар</a>
+      <a class="hide" href="./competition.html">Тэмцээн</a>
+      <a class="hide" href="./rule.html">Дүрэм</a>
+      <ol id="hamburger">
+        <i class="fa-solid fa-bars" style="color: white;"></i>
+      </ol>
+
+    </nav>
+  </header>
+  <div class="container">
+
+    <mysidebar-component></mysidebar-component>
+    <template></template>
+    <slot></slot>
+    <tools-container>
+      <div id="tools-container"></div>
+    </tools-container>
+    
+    <div id="billiard-container"></div>
+    <sidebar-component></sidebar-component>
+ 
+
+  </div>
+  <div><img class="mapImg" src="../img/maps.png" alt="">
+  </div>
+  <footer>
+    <address class="icons1">
+      <ul>
+        <li><a target="_blank"
+            href="https://www.google.com/maps/place/National+University+of+Mongolia/@47.9210816,106.9240684,16.27z/data=!4m6!3m5!1s0x5d9692422e995f0d:0x5a0c476857758c27!8m2!3d47.9230352!4d106.9188949!16zL20vMGRxeHBs?entry=ttu"><img
+              src="./img/map-logo-30.jpg" alt="Map Icon"></a></li>
+        <li><a target="_blank"
+            href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqXPnzSzxdvpLvqNTFbrTMbXKgbbCmpXvHmCbDkvwpQrTnDbLxQhQRjDCRZntKPftPjtnV"><img
+              src="./img/image_processing20210717-12803-emxyw3.png" alt="Mail Icon"></a></li>
+        <li><img src="./img/2jhd30g.jpg" alt="Phone Call Icon"></li>
+        <li><a href="https://www.facebook.com/messages/t/100028507861343" target="_blank"><img src="./img/91933.png"
+              alt="Facebook Icon"></a></li>
+      </ul>
+    </address>
+  </footer>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+  </script>
+  <script src="main.js"></script>
+  
+
+
+  <!-- <script src="main.js" type="module"></script> -->
+  <script type="module" src="./tools-container-component.js"></script>
+  <script type="module" src="./sidebar-component.js"></script>
+  <!-- <script src="ToolComponent.js" type="module"></script>  -->
+  
+</body>
+
+</html>
