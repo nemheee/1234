@@ -1,4 +1,20 @@
-
+/* Default styles for both modes */
+body {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Dark mode styles */
+  .dark-mode {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  /* Light mode styles */
+  .light-mode {
+    background-color: #fff;
+    color: #222;
+  }
+  
 .cart{
     display: flex;
     background-color: white;

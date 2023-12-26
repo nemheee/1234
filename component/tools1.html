@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 
 <head>
   <meta charset="UTF-8">
@@ -12,10 +13,14 @@
   <title>Billiard</title>
   <link rel="stylesheet" href="addtocart.css">
   <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="./tool.css"> -->
   <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
 
   <script src="mysidebar-component.js"></script>
-
+  <script>
+    document.body.classList.add(localStorage.getItem('theme') || 'dark-mode');
+  </script>
+  
 </head>
 
 <body>
@@ -63,10 +68,11 @@
       <ol id="hamburger">
         <i class="fa-solid fa-bars" style="color: white;"></i>
       </ol>
+      <button id="theme-toggle">Toggle Dark/Light</button>
 
     </nav>
   </header>
-  <div class="container">
+  <div class="container" >
     <div id="mySidebar" class="overlay">
       <button class="open-btn" onclick="openNav()">☰ Open Sidebar</button>
 
@@ -133,6 +139,19 @@
   
 
 
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      const isDarkMode = body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDarkMode ? 'dark-mode' : 'light-mode');
+    }
+  
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', toggleTheme);
+    }
+  </script>
   
 </body>
 
