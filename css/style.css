@@ -352,7 +352,6 @@ ul.icons li img {
 #section2,
 #section3,
 #section4 {
-    margin-top: 8rem;
     margin-left: -8rem;
     display: flex;
     justify-content: space-around;
