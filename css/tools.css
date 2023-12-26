@@ -8,6 +8,11 @@ body {
   background: white;
   align-items: center;
   justify-content: center;
+  & header{
+    position:fixed;
+    width: 100%;
+    background-color: white;
+  }
 }
 
 ul>li {
@@ -89,14 +94,16 @@ img {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  margin-left: 20%;
+  padding-top: 10%;
 }
 
 .overlay {
-  height: 90%;
-  width: 30rem;
+  height: 100%;
+  width: 20%;
   position: fixed;
   z-index: 2;
-  top: 25rem;
+  top: 24.5%;
   left: 0;
   background-color: rgb(3, 61, 3);
   overflow-x: hidden;
