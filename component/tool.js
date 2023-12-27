@@ -17,15 +17,12 @@ export default class Tool {
                 ? toolsData.filter(tool => tool.category === category)
                 : toolsData;
     
-            // Render the tools using the specified container
             this.render(container, filteredTools);
     
-            // If a billiard container is specified and it is different from the main container, update it with the rendered tools
             if (billiardContainer && container.id === 'billiard-container') {
                 this.render(billiardContainer, filteredTools);
             }
     
-            // Update URL search parameters
             const searchParams = new URLSearchParams(window.location.search);
     
             if (category) {
@@ -34,7 +31,6 @@ export default class Tool {
                 searchParams.delete('category');
             }
     
-            // Update the URL without triggering a page reload
             window.history.replaceState({}, '', `${window.location.pathname}?${searchParams.toString()}`);
         } catch (error) {
             console.error('Error fetching and rendering tools:', error);
@@ -44,7 +40,6 @@ export default class Tool {
 static getContainer(containerId) {
     const container = document.getElementById(containerId);
 
-    // If the container has a shadow DOM, return the shadow root
     return container.shadowRoot || container;
 }
 
@@ -81,13 +76,10 @@ static getContainer(containerId) {
             </div>
         `;
     
-        // Append the tool element to the shadow root
         shadowRoot.appendChild(toolElement);
     
-        // Create a container for the shadow DOM
         const container = document.createElement('div');
     
-        // Attach the shadow root to the container
         container.attachShadow({ mode: 'open' }).appendChild(shadowRoot);
     
         return container;
@@ -115,7 +107,6 @@ static getContainer(containerId) {
     
         if (cartIcon && mySidebar) {
             cartIcon.addEventListener('click', function () {
-                // Toggle the visibility of the sidebar
                 const isSidebarHidden = mySidebar.style.display === 'none' || mySidebar.style.display === '';
                 mySidebar.style.display = isSidebarHidden ? 'block' : 'none';
             });

@@ -1,3 +1,4 @@
+// import "./tool"
 class ToolsContainerComponent extends HTMLElement {
     constructor() {
         super();
@@ -9,14 +10,27 @@ class ToolsContainerComponent extends HTMLElement {
     }
 
     async render() {
-        const toolsData = await Tool.fetchToolsData();
-        const categories = [...new Set(toolsData.map(item => item))];
-        const container = document.createElement('div');
-        container.id = 'tools-container';
-        Tool.render(container, categories);
+        try {
+            const toolsData = await Tool.fetchToolsData();
+            const categories = [...new Set(toolsData.map(item => item))];
+            
+            const container = document.createElement('div');
+            container.id = 'tools-container';
 
-        this.shadowRoot.innerHTML = '';
-        this.shadowRoot.appendChild(container);
+            Tool.render(container, categories);
+
+            // Apply grid styles
+            container.style.display = 'grid';
+            container.style.gridTemplateColumns = 'auto auto';
+            container.style.gap = "1rem"
+            container.style.padding = "1rem"
+
+            // Append the container to the shadow DOM
+            this.shadowRoot.innerHTML = '';
+            this.shadowRoot.appendChild(container);
+        } catch (error) {
+            console.error('Error rendering tools:', error);
+        }
     }
 }
 

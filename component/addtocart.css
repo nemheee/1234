@@ -45,6 +45,7 @@ body {
     padding: 15px;
     text-align: center;
     
+    
 }
 .container{
     display: flex;
@@ -166,4 +167,8 @@ button:hover{
 #count{
     /* color: black; */
     font-size: 50%;
+}
+.overlay-top {
+    padding: 60px;
+    top: 100px;
 }
