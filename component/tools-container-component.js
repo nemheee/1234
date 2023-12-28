@@ -19,13 +19,11 @@ class ToolsContainerComponent extends HTMLElement {
 
             Tool.render(container, categories);
 
-            // Apply grid styles
             container.style.display = 'grid';
             container.style.gridTemplateColumns = 'auto auto';
             container.style.gap = "1rem"
             container.style.padding = "1rem"
 
-            // Append the container to the shadow DOM
             this.shadowRoot.innerHTML = '';
             this.shadowRoot.appendChild(container);
         } catch (error) {

@@ -48,9 +48,9 @@
             <a class="humanicon" href="./login.html"><img src="../img/5358.webp" alt="Login"></a>
             <a class="login" href="./login.html">Нэвтрэх</a>
             <!-- <a  href="./html/tools.html"><img src="./img/il_1080xN.4146295096_gvtc.jpg" alt="Tools"></a> -->
-            <a class="cart" href="#" style="border: 1px solid black; color: grey; padding: 0.6rem;">
+            <a class="cart" href="#" style="border: 1px solid black; color: grey; padding: 0.6rem;font-size: 2rem;">
               <i class="fa-solid fa-cart-shopping"></i>
-              <p style="text-align: right;" id="count">0</p>
+              <p style="text-align: right; ;" id="count">0</p>
            
              
             </a>
@@ -74,9 +74,12 @@
   </header>
   <div class="container">
 
-    <mysidebar-component top="nemeh"></mysidebar-component>
-    <template></template>
-    <slot></slot>
+    <mysidebar-component top="nemeh">
+      <div slot="slot1"></div>
+      <div slot="slot2"></div>
+      <template></template>
+    </mysidebar-component>
+   
     <tools-container>
       <div id="tools-container"></div>
     </tools-container>

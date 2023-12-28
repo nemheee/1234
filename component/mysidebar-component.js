@@ -59,8 +59,10 @@ class MySidebarComponent extends HTMLElement {
     render() {
         const shouldAddTopClass = this.getAttribute('top') === 'nemeh';
 
-        this.innerHTML = `
-        <div id="mySidebar" class="overlay${shouldAddTopClass ? ' overlay-top' : ''}">
+        // Creating a template element and appending it to the shadow DOM
+        const template = document.createElement('template');
+        template.innerHTML = `
+            <div id="mySidebar" class="overlay${shouldAddTopClass ? ' overlay-top' : ''}">
                 <button class="open-btn" onclick="openNav()">☰ Open Sidebar</button>
                 <div class="overlay-content">
                     <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">
@@ -73,17 +75,26 @@ class MySidebarComponent extends HTMLElement {
                     <a id="ball-link" href="#">Шаариг</a>
                     <a id="closet-link" href="#">Шүүгээ</a>
                     <a id="accessories-link" href="#">Шаариг хайрцагтай</a>
+                    <div class="connected-container">
+                    <div class="slot1-container">
+                      <slot name="slot1"></slot>
+                    </div>
+                    <div class="slot2-container">
+                      <slot name="slot2"></slot>
+                    </div>
+                  </div>
                 </div>
             </div>`;
+
+        // Attach the template content to the shadow DOM
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+   
+        
     }
 
-    async fetchAndRenderTools(containerId, category, billiardContainer) {
-        // Implement your logic for fetching and rendering tools here
-    }
 
-    updateCart(updatedCart) {
-        // Implement your logic for updating the cart here
-    }
+ 
 }
 
 customElements.define('mysidebar-component', MySidebarComponent);
