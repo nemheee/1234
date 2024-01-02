@@ -1,7 +1,7 @@
 class MySidebarComponent extends HTMLElement {
     constructor() {
         super();
-        this.billiardContainer = document.getElementById('billiard-container'); // Assuming billiard-container is the correct ID
+        this.billiardContainer = document.getElementById('billiard-container'); 
     }
 
     connectedCallback() {
@@ -57,11 +57,26 @@ class MySidebarComponent extends HTMLElement {
     }
 
     render() {
-        const shouldAddTopClass = this.getAttribute('top') === 'nemeh';
-
-        // Creating a template element and appending it to the shadow DOM
+        const topAttribute = this.getAttribute('top');
+        const optionsAttribute = this.getAttribute('options');
+        const shouldAddTopClass = topAttribute === 'nemeh' || topAttribute === "nemeh2";
+    
+        const additionalStyles = optionsAttribute === 'nemeh2' ? 'margin-top: 100px; margin-left: 100px; color:green;' : '';
+    
         const template = document.createElement('template');
         template.innerHTML = `
+        <style>
+        /* Add your overlay styles here */
+        
+        .overlay{
+            ${additionalStyles}    
+        }
+        .overlay-top {
+            margin-top:50px;
+            margin-left:50px;
+            // background-color:black;
+        }
+        </style>
             <div id="mySidebar" class="overlay${shouldAddTopClass ? ' overlay-top' : ''}">
                 <button class="open-btn" onclick="openNav()">☰ Open Sidebar</button>
                 <div class="overlay-content">
@@ -86,7 +101,6 @@ class MySidebarComponent extends HTMLElement {
                 </div>
             </div>`;
 
-        // Attach the template content to the shadow DOM
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
    

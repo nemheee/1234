@@ -39,7 +39,11 @@ img {
 }
 
 #toggle {
-    background-color: var(--color-bg-default);
+   /* Linear Gradient Background */
+/* Linear Gradient Background with Multiple Green Colors */
+background: linear-gradient(40deg,  #0b5622, #57e765, #2e6c36, #0f5c0f);
+
+
 }
 
 #toggle {
@@ -47,32 +51,38 @@ img {
     justify-content: space-around;
     align-items: center;
     position: relative;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
     .active {
         border: 0.2rem solid white;
-        background: var(--color-main);
-        color: white;
+
+
+        background: linear-gradient(30deg,  #5e5fc4, #1741ab, #8129c0, #4e91ef);
+        color: white; 
+
     }
 
     /* height: 5rem; */
     & a {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-decoration: none;
         align-items: center;
         text-align: center;
-        background: #b5aeae;
+        background: linear-gradient(30deg,  #5e5fc4, #1741ab, #8129c0, #4e91ef);
+        color: white;
         padding-left: 5%;
-        padding-right: 5%;
+        padding-right: 5%; 
+        /* padding-top: 5% */
+        margin: 2px;
         /* border: 2px solid; */
         border-radius: 10px;
-        color: black;
+        border: 0.15rem solid white;
     }
 
     & a:hover {
         color: white;
-        background-color: var(--color-bg-default);
+        background: #b5aeae;
         border: 1px solid white;
         opacity: 0.8;
 
@@ -136,7 +146,8 @@ img {
 } */
 footer {
 
-    background: var(--color-bg-default);
+    /* background: var(--color-bg-default); */
+    background: linear-gradient(40deg,  #0b5622, #57e765, #0f5c0f); 
     display: flex;
     justify-content: center;
     height: 20vh;
@@ -261,7 +272,7 @@ ul.icons li img {
     }
 
     & .competition-details {
-        background-color: #1E4620;
+        background: linear-gradient(40deg,  #0b5622, #57e765, #0f5c0f); 
         padding: 2rem;
         width: 75%;
         margin: auto;
@@ -295,15 +306,38 @@ ul.icons li img {
         }
     }
 }
+/* Center the .table-cont div */
+.table-cont {
+     display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    padding-top: 100px; 
+  
+}
+
+/* Style the h2 element */
+.table-cont h2 {
+   
+    font-size: 35px;
+    width: 300px;
+    height: 80px;
+    text-align: center; /* Center the text horizontally */
+    line-height: 80px; /* Center the text vertically */
+}
 
 #article2 {
 
 
     position: relative;
     max-width: 100%;
-
+    & button{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
     & div {
-        background-image: url(../img/Spencer.png);
+        background-image:linear-gradient( 45deg, rgb(18, 150, 18) , rgb(88, 201, 133) );
         border-radius: 0.5rem;
         /* background-repeat: no-repeat; */
         height: 100%;
@@ -313,11 +347,11 @@ ul.icons li img {
             color: white
         }
 
-        & button {
+        /* & button {
             position: absolute;
             bottom: 2rem;
             margin-left: 70%;
-        }
+        } */
 
         & .table {
             background-color: white;
@@ -352,6 +386,7 @@ ul.icons li img {
 #section2,
 #section3,
 #section4 {
+    margin-top: 8rem;
     margin-left: -8rem;
     display: flex;
     justify-content: space-around;
@@ -394,7 +429,6 @@ ul.icons li img {
         height: 30%;
         position: relative;
         padding-left: 0rem;
-        padding-top: 1rem;
 
         & button {
             position: absolute;
@@ -517,7 +551,6 @@ ul.icons li img {
     #section4 {
         display: block;
 
-
         & .top-club {
             padding-left: 10rem;
         }
@@ -525,10 +558,6 @@ ul.icons li img {
 
     .grid-container {
         display: block;
-    }
-}    #section3{
-    & .onch-ugs{
-        padding-left: 4rem;
     }
 }
 
@@ -547,7 +576,7 @@ ul.icons li img {
     #section3,
     #section4 {
         & .top-club {
-            padding-left: 15rem;
+            padding-left: 10rem;
 
             & div {
                 display: grid;
@@ -572,18 +601,15 @@ ul.icons li img {
        
     }
 
-
     #navbar1 {
         & .login {
             display: none;
-            
         }
     }
 
     #article1 {
         display: block;
     }
-   
 
     .img-container {
         padding-bottom: 1rem;

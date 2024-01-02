@@ -1,7 +1,7 @@
 class SidebarComponent extends HTMLElement {
   connectedCallback() {
       this.render();
-      this.addEventListeners(); // Call the method to add event listeners
+      this.addEventListeners(); 
       document.addEventListener('cartUpdated', (event) => {
           const updatedCart = event.detail;
           this.updateCart(updatedCart);

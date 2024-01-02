@@ -34,12 +34,10 @@ export default class Tool {
     
             const tools = await response.json();
     
-            // Filter tools based on category
             const filteredTools = category ? tools.filter(tool => tool.category === category) : tools;
     
             this.renderTools(filteredTools, target, billiardContainer);
     
-            // Update URL with filtered category
             const searchParams = new URLSearchParams(window.location.search);
             if (category) {
                 searchParams.set('category', category);
@@ -61,7 +59,6 @@ export default class Tool {
             return;
         }
 
-        // Clear the container before adding new tools
         toolsContainer.innerHTML = '';
 
         const toolsElements = tools.map(toolData => {

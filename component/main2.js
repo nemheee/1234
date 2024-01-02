@@ -14,15 +14,12 @@ static async fetchAndRenderTools(containerId, category, billiardContainer) {
             ? toolsData.filter(tool => tool.category === category)
             : toolsData;
 
-        // Render the tools using the specified container
         this.render(document.getElementById(containerId), filteredTools);
 
-        // If a billiard container is specified and it is different from the main container, update it with the rendered tools
         if (billiardContainer && containerId === 'billiard-container') {
             this.render(billiardContainer, filteredTools);
         }
 
-        // Update URL search parameters
         const searchParams = new URLSearchParams(window.location.search);
 
         if (category) {
@@ -31,7 +28,6 @@ static async fetchAndRenderTools(containerId, category, billiardContainer) {
             searchParams.delete('category');
         }
 
-        // Update the URL without triggering a page reload
         window.history.replaceState({}, '', `${window.location.pathname}?${searchParams.toString()}`);
     } catch (error) {
         console.error('Error fetching and rendering tools:', error);
@@ -52,10 +48,8 @@ static async fetchAndRenderTools(containerId, category, billiardContainer) {
     }
 
     renderToolElement() {
-        // Create a shadow root
         const shadowRoot = document.createElement('div').attachShadow({ mode: 'open' });
     
-        // Create the tool element within the shadow DOM
         const toolElement = document.createElement('div');
         toolElement.className = 'box';
         toolElement.innerHTML = `
@@ -76,13 +70,10 @@ static async fetchAndRenderTools(containerId, category, billiardContainer) {
             </div>
         `;
     
-        // Append the tool element to the shadow root
         shadowRoot.appendChild(toolElement);
     
-        // Create a container for the shadow DOM
         const container = document.createElement('div');
     
-        // Attach the shadow root to the container
         container.attachShadow({ mode: 'open' }).appendChild(shadowRoot);
     
         return container;
@@ -111,7 +102,6 @@ static async fetchAndRenderTools(containerId, category, billiardContainer) {
     
         if (cartIcon && mySidebar) {
             cartIcon.addEventListener('click', function () {
-                // Toggle the visibility of the sidebar
                 console.log("bnuuuu");
                 const isSidebarHidden = mySidebar.style.display === 'none' || mySidebar.style.display === '';
                 mySidebar.style.display = isSidebarHidden ? 'block' : 'none';

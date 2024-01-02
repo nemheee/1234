@@ -1,4 +1,3 @@
-// import "./tool"
 class ToolsContainerComponent extends HTMLElement {
     constructor() {
         super();

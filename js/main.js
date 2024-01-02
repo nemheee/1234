@@ -16,13 +16,15 @@ export default class Tool {
 
     static async fetchAndRenderTools(target, category) {
         try {
-            const response = await fetch('tools.json');
+            const response = await fetch('/tools.json');
 
             if (!response.ok) {
                 throw new Error(`Failed to fetch tools. Status: ${response.status}`);
             }
 
             const tools = await response.json();
+            console.log(tools);
+            console.log("bataa")
             const filteredTools = category ? tools.filter(tool => tool.category === category) : tools;
 
             this.renderTools(filteredTools, target);
@@ -85,4 +87,3 @@ export default class Tool {
     }
 }
 
-// Call the addEventListeners method to set up the click event listener

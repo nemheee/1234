@@ -1,15 +1,15 @@
 /* Default styles for both modes */
 body {
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
   }
   
-  /* Dark mode styles */
   .dark-mode {
     background-color: #222;
     color: #fff;
+   
+    
   }
   
-  /* Light mode styles */
   .light-mode {
     background-color: #fff;
     color: #222;
@@ -169,6 +169,6 @@ button:hover{
     font-size: 50%;
 }
 .overlay-top {
-    padding: 60px;
-    top: 100px;
+    padding: 600px;
+    top: 1000px;
 }
